@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torox Studio — Building Virtual Beasts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor">
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-mark"></div>
+    TOROX<span>.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact" class="nav-cta">Start a project</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">Roblox Game Studio</div>
+    <h1 class="hero-title">
+      TOROX
+      <span class="accent">STUDIO</span>
+    </h1>
+    <p class="hero-sub">Building Virtual Beasts</p>
+    <p class="hero-desc">
+      We craft immersive Roblox experiences for brands and companies ready to dominate the metaverse. From concept to launch — engineered for scale, built to captivate.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Start a project</a>
+      <a href="#work" class="btn-ghost">See our work</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="beast-container">
+      <!-- Rings -->
+      <div class="beast-ring ring-1"></div>
+      <div class="beast-ring ring-2"></div>
+      <div class="beast-ring ring-3"></div>
+
+      <!-- Orbiting dots -->
+      <div class="orbit-dot orbit-1" style="--r:190px"></div>
+      <div class="orbit-dot orbit-2" style="--r:150px"></div>
+      <div class="orbit-dot orbit-3" style="--r:100px; width:4px; height:4px;"></div>
+
+      <!-- Core -->
+      <div class="beast-core">
+        <div class="beast-hex">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,5 93,27.5 93,72.5 50,95 7,72.5 7,27.5" fill="#0e0820" stroke="#b44fff" stroke-width="1.5"/>
+            <polygon points="50,18 82,34.5 82,65.5 50,82 18,65.5 18,34.5" fill="#08051a" stroke="rgba(180,79,255,0.45)" stroke-width="1"/>
+            <text x="50" y="57" text-anchor="middle" fill="#b44fff" font-family="Bebas Neue, sans-serif" font-size="22" letter-spacing="2">TX</text>
+            <circle cx="50" cy="50" r="8" fill="none" stroke="#00f5e4" stroke-width="0.8" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">12<span>+</span></div>
+      <div class="stat-label">Projects Shipped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5<span>M+</span></div>
+      <div class="stat-label">Player Sessions</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3<span>+</span></div>
+      <div class="stat-label">Years in Roblox</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <!-- doubled for seamless loop -->
+    <div class="marquee-item"><span class="dot"></span> Roblox Game Development</div>
+    <div class="marquee-item"><span class="dot"></span> Brand Activations</div>
+    <div class="marquee-item"><span class="dot"></span> Luau Engineering</div>
+    <div class="marquee-item"><span class="dot"></span> 3D World Design</div>
+    <div class="marquee-item"><span class="dot"></span> Game Systems Architecture</div>
+    <div class="marquee-item"><span class="dot"></span> UI / UX for Games</div>
+    <div class="marquee-item"><span class="dot"></span> Monetization Strategy</div>
+    <div class="marquee-item"><span class="dot"></span> Roblox Game Development</div>
+    <div class="marquee-item"><span class="dot"></span> Brand Activations</div>
+    <div class="marquee-item"><span class="dot"></span> Luau Engineering</div>
+    <div class="marquee-item"><span class="dot"></span> 3D World Design</div>
+    <div class="marquee-item"><span class="dot"></span> Game Systems Architecture</div>
+    <div class="marquee-item"><span class="dot"></span> UI / UX for Games</div>
+    <div class="marquee-item"><span class="dot"></span> Monetization Strategy</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-layout">
+    <div class="services-intro">
+      <div class="section-label reveal">Our Weapons</div>
+      <h2 class="section-title reveal reveal-delay-1">WHAT<br>WE<br><span class="acc">BUILD</span></h2>
+      <p class="reveal reveal-delay-2">From brand experiences to fully-realized game worlds. We engineer Roblox products that don't just exist — they dominate.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-body">
+          <div class="service-name">Brand Experience Worlds</div>
+          <div class="service-desc">Full-scale immersive environments for brands entering Roblox. We translate your identity into a living, playable world your audience won't forget.</div>
+          <div class="service-tags">
+            <span class="tag">World Design</span>
+            <span class="tag">Brand Identity</span>
+            <span class="tag">Engagement Systems</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <div class="service-body">
+          <div class="service-name">Game Systems Engineering</div>
+          <div class="service-desc">Deep Luau architecture: combat, progression, economies, avatar systems. Scalable, clean code built to handle millions of concurrent players.</div>
+          <div class="service-tags">
+            <span class="tag">Luau</span>
+            <span class="tag">Systems Design</span>
+            <span class="tag">Performance</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <div class="service-body">
+          <div class="service-name">Game UI / UX Design</div>
+          <div class="service-desc">Interfaces that feel native to the game world. Menus, HUDs, inventory systems, and onboarding flows designed for maximum player retention.</div>
+          <div class="service-tags">
+            <span class="tag">UI Design</span>
+            <span class="tag">Player Retention</span>
+            <span class="tag">Roblox GUI</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-num">04</div>
+        <div class="service-body">
+          <div class="service-name">3D Environment & Asset Production</div>
+          <div class="service-desc">Handcrafted 3D environments, props, and character assets built for Roblox Studio. Optimized for performance without sacrificing visual quality.</div>
+          <div class="service-tags">
+            <span class="tag">3D Modeling</span>
+            <span class="tag">Roblox Studio</span>
+            <span class="tag">Optimization</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">05</div>
+        <div class="service-body">
+          <div class="service-name">Monetization & Live Ops</div>
+          <div class="service-desc">Battle passes, gamepass strategies, seasonal events, and virtual economies designed to maximize revenue without killing player experience.</div>
+          <div class="service-tags">
+            <span class="tag">Robux Economy</span>
+            <span class="tag">Live Events</span>
+            <span class="tag">Retention</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="work-header">
+    <div>
+      <div class="section-label reveal">Selected Work</div>
+      <h2 class="section-title reveal reveal-delay-1">THE<br><span class="acc">BEASTS</span><br>WE BUILT</h2>
+    </div>
+    <a href="#contact" class="btn-ghost reveal reveal-delay-2">View all projects ↗</a>
+  </div>
+
+  <div class="work-grid reveal">
+    <!-- Featured project -->
+    <div class="project-card featured">
+      <div class="project-visual pv-1">
+        <div class="project-art">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="20" width="80" height="80" rx="4" stroke="rgba(180,79,255,0.4)" stroke-width="1" fill="none"/>
+            <rect x="80" y="100" width="40" height="80" rx="2" stroke="rgba(180,79,255,0.3)" stroke-width="1" fill="none"/>
+            <circle cx="100" cy="60" r="20" stroke="rgba(180,79,255,0.5)" stroke-width="1.5" fill="rgba(180,79,255,0.05)"/>
+            <line x1="20" y1="100" x2="180" y2="100" stroke="rgba(0,245,228,0.2)" stroke-width="0.5"/>
+            <line x1="100" y1="10" x2="100" y2="190" stroke="rgba(0,245,228,0.15)" stroke-width="0.5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-info">
+        <div class="project-cat">Brand Activation · 2024</div>
+        <div class="project-name">NEON DISTRICT EXPERIENCE</div>
+        <div class="project-desc">Full open-world brand experience for a streetwear label. 2M+ visits in first month. Custom avatar gear, challenges, and exclusive drops.</div>
+      </div>
+    </div>
+
+    <!-- Side projects -->
+    <div class="project-card">
+      <div class="project-visual pv-2">
+        <div class="project-art">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,20 170,60 170,140 100,180 30,140 30,60" stroke="rgba(180,79,255,0.4)" stroke-width="1" fill="none"/>
+            <polygon points="100,50 140,72 140,128 100,150 60,128 60,72" stroke="rgba(0,245,228,0.25)" stroke-width="0.8" fill="none"/>
+            <circle cx="100" cy="100" r="15" stroke="rgba(0,245,228,0.5)" stroke-width="1" fill="rgba(0,245,228,0.05)"/>
+          </svg>
+        </div>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-info">
+        <div class="project-cat">Game Development · 2024</div>
+        <div class="project-name">VOID RUNNERS</div>
+        <div class="project-desc">Competitive parkour-RPG with custom IK avatar system and ranked matchmaking.</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-visual pv-3">
+        <div class="project-art">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" width="60" height="60" stroke="rgba(180,79,255,0.35)" stroke-width="1" fill="none"/>
+            <rect x="110" y="30" width="60" height="60" stroke="rgba(180,79,255,0.25)" stroke-width="1" fill="none"/>
+            <rect x="30" y="110" width="60" height="60" stroke="rgba(180,79,255,0.2)" stroke-width="1" fill="none"/>
+            <rect x="110" y="110" width="60" height="60" stroke="rgba(0,245,228,0.3)" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-info">
+        <div class="project-cat">Systems Architecture · 2025</div>
+        <div class="project-name">TOROX ENGINE</div>
+        <div class="project-desc">Internal Luau framework powering all Torox projects. Open for enterprise licensing.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-layout">
+    <div class="about-visual reveal">
+      <div class="about-frame">
+        <div class="about-frame-bg"></div>
+        <div class="about-corner tl"></div>
+        <div class="about-corner tr"></div>
+        <div class="about-corner bl"></div>
+        <div class="about-corner br"></div>
+        <div class="about-placeholder">
+          <div class="about-avatar-ring">
+            <div class="about-avatar-inner">TX</div>
+          </div>
+          <div style="text-align:center; margin-top:1rem;">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.5rem; color:var(--white); letter-spacing:0.08em;">YOUR NAME HERE</div>
+            <div style="font-family:'Fira Code',monospace; font-size:0.7rem; color:var(--cyan); letter-spacing:0.15em; text-transform:uppercase; margin-top:0.3rem;">Founder & Lead Developer</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-badge">
+        <div class="about-badge-title">TOROX STUDIO</div>
+        <div class="about-badge-sub">Est. 2022 · Roblox</div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="section-label reveal">The Beast Behind the Studio</div>
+      <h2 class="section-title reveal reveal-delay-1">BUILT BY<br>A <span class="acc">DEVELOPER</span><br>WHO PLAYS</h2>
+      <p class="reveal reveal-delay-2">
+        Torox Studio is a solo-founded Roblox development studio focused on creating high-quality games and brand experiences. Every project is personally crafted — no outsourced corners cut, no generic templates.
+      </p>
+      <p class="reveal reveal-delay-2">
+        With a background spanning game systems architecture, 3D environment design, and UI engineering, Torox brings a complete technical and creative vision to every build.
+      </p>
+      <div class="skills-grid reveal reveal-delay-3">
+        <div class="skill-item"><span class="skill-dot"></span>Luau / Roblox Studio</div>
+        <div class="skill-item"><span class="skill-dot"></span>Game Systems Design</div>
+        <div class="skill-item"><span class="skill-dot"></span>3D Environment Art</div>
+        <div class="skill-item"><span class="skill-dot"></span>UI / UX Design</div>
+        <div class="skill-item"><span class="skill-dot"></span>Avatar & IK Systems</div>
+        <div class="skill-item"><span class="skill-dot"></span>Game Economy Design</div>
+      </div>
+      <a href="#contact" class="btn-primary reveal reveal-delay-4">Work with us</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-header">
+    <div class="section-label reveal" style="justify-content:center;">How We Hunt</div>
+    <h2 class="section-title reveal reveal-delay-1">THE PROCESS</h2>
+    <p class="reveal reveal-delay-2" style="color:var(--muted); max-width:500px; margin:0 auto; line-height:1.75; font-size:0.95rem;">
+      From your brief to a live experience. Structured, transparent, and built around your goals.
+    </p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Discovery & Brief</div>
+      <div class="step-desc">We dig into your brand, audience, and goals. What does winning look like for this project? We define it together before a single line is written.</div>
+    </div>
+    <div class="process-step reveal reveal-delay-1">
+      <div class="step-num">02</div>
+      <div class="step-title">Design & Architecture</div>
+      <div class="step-desc">Game design documents, world layout concepts, system blueprints. Every decision is made intentionally before touching Roblox Studio.</div>
+    </div>
+    <div class="process-step reveal reveal-delay-2">
+      <div class="step-num">03</div>
+      <div class="step-title">Build & Iterate</div>
+      <div class="step-desc">Rapid prototyping, weekly builds, continuous feedback loops. You're always in the loop — no six-week blackouts, no surprise deliverables.</div>
+    </div>
+    <div class="process-step reveal reveal-delay-3">
+      <div class="step-num">04</div>
+      <div class="step-title">Launch & Support</div>
+      <div class="step-desc">QA, performance optimization, and a polished launch. Plus ongoing support and live ops if you want to keep the beast fed.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact">
+  <div class="cta-eyebrow">Ready to build?</div>
+  <h2 class="cta-title">LET'S<br>BIRTH A<br><span class="acc">BEAST</span></h2>
+  <p class="cta-sub">
+    Tell us about your project — a brand activation, a game concept, or just an idea you can't shake. We'll turn it into something players remember.
+  </p>
+  <div class="cta-actions">
+    <a href="mailto:hello@toroxstudio.com" class="btn-primary">Send a brief</a>
+    <a href="#" class="btn-ghost">View Portfolio</a>
+  </div>
+  <a href="mailto:hello@toroxstudio.com" class="cta-email">
+    <span>→</span> hello@toroxstudio.com
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">TOROX<span>.</span>STUDIO</div>
+  <div class="footer-copy">© 2025 Torox Studio — Building Virtual Beasts</div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

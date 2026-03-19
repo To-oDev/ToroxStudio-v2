@@ -1,0 +1,184 @@
+/* ── HERO ─────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(180,79,255,0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(0,245,228,0.06) 0%, transparent 60%);
+}
+
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.4;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+}
+
+.hero-left {
+  grid-column: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 8rem 3rem 6rem 3rem;
+  position: relative; z-index: 2;
+}
+
+.hero-eyebrow {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: var(--cyan);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.3s forwards;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.hero-eyebrow::before {
+  content: ''; width: 32px; height: 1px; background: var(--cyan);
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4.5rem, 9vw, 9rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 0.1em;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.5s forwards;
+}
+.hero-title .accent { color: var(--purple); display: block; }
+
+.hero-sub {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.7s forwards;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 440px;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.9s forwards;
+}
+
+.hero-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.9s 1.1s forwards;
+}
+
+.hero-right {
+  grid-column: 2;
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── BEAST GRAPHIC ────────────────────────────────── */
+.beast-container {
+  position: relative;
+  width: 480px; height: 480px;
+  opacity: 0;
+  animation: fadeIn 1.2s 0.6s forwards;
+}
+
+.beast-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ring-1 {
+  width: 380px; height: 380px;
+  border-color: rgba(180,79,255,0.18);
+  animation: spinSlow 20s linear infinite;
+}
+.ring-2 {
+  width: 300px; height: 300px;
+  border-color: rgba(0,245,228,0.12);
+  border-style: dashed;
+  animation: spinSlow 14s linear infinite reverse;
+}
+.ring-3 {
+  width: 200px; height: 200px;
+  border-color: rgba(180,79,255,0.25);
+  animation: spinSlow 8s linear infinite;
+}
+
+.beast-core {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px; height: 140px;
+}
+
+.beast-hex {
+  width: 100%; height: 100%;
+  position: relative;
+}
+
+.beast-hex svg {
+  width: 100%; height: 100%;
+  filter: drop-shadow(0 0 20px rgba(180,79,255,0.6)) drop-shadow(0 0 40px rgba(180,79,255,0.25));
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.orbit-dot {
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  top: 50%; left: 50%;
+  box-shadow: 0 0 8px var(--cyan);
+}
+
+.orbit-1 { animation: orbit 6s linear infinite; }
+.orbit-2 { animation: orbit 9s linear infinite reverse; background: var(--purple); box-shadow: 0 0 8px var(--purple); }
+.orbit-3 { animation: orbit 12s linear infinite; }
+
+@keyframes orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(190px) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg) translateX(190px) rotate(-360deg); }
+}
+
+.hero-stats {
+  position: absolute;
+  bottom: 3rem; left: 3rem;
+  display: flex; gap: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 1.3s forwards;
+  z-index: 2;
+}
+.stat-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  color: var(--white);
+  line-height: 1;
+}
+.stat-num span { color: var(--purple); }
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

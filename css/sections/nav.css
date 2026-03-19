@@ -1,0 +1,65 @@
+/* ── NAV ──────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.4rem 3rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.4s, background 0.4s, backdrop-filter 0.4s;
+}
+nav.scrolled {
+  border-color: var(--border);
+  background: rgba(7,7,8,0.85);
+  backdrop-filter: blur(18px);
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.nav-logo span { color: var(--purple); }
+.logo-mark {
+  width: 28px; height: 28px;
+  border: 2px solid var(--purple);
+  transform: rotate(45deg);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-mark::after {
+  content: '';
+  width: 10px; height: 10px;
+  background: var(--purple);
+  transform: rotate(0deg);
+}
+.nav-links {
+  display: flex; gap: 2.5rem; list-style: none;
+}
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1px; background: var(--cyan);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.25s cubic-bezier(.25,.46,.45,.94);
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta {
+  background: var(--purple);
+  color: var(--black) !important;
+  padding: 0.5rem 1.3rem;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--cyan) !important; color: var(--black) !important; }
+.nav-cta::after { display: none !important; }

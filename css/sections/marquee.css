@@ -1,0 +1,29 @@
+/* ── MARQUEE ──────────────────────────────────────── */
+.marquee-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  overflow: hidden;
+  background: var(--deep);
+}
+.marquee-track {
+  display: flex; gap: 0; width: max-content;
+  animation: marquee 20s linear infinite;
+}
+.marquee-item {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 0 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.marquee-item .dot {
+  width: 5px; height: 5px; background: var(--purple);
+  transform: rotate(45deg); flex-shrink: 0;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

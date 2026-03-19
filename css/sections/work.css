@@ -1,0 +1,117 @@
+/* ── WORK / PROJECTS ──────────────────────────────── */
+#work {
+  padding: 8rem 3rem;
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+}
+.work-header {
+  max-width: 1300px; margin: 0 auto 4rem;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.work-grid {
+  max-width: 1300px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+.project-card {
+  background: var(--panel);
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.project-card.featured {
+  grid-column: span 2;
+  aspect-ratio: unset;
+}
+.project-visual {
+  position: absolute; inset: 0;
+  transition: transform 0.6s cubic-bezier(.25,.46,.45,.94);
+}
+.project-card:hover .project-visual { transform: scale(1.04); }
+
+/* Individual project visuals */
+.pv-1 {
+  background:
+    radial-gradient(circle at 30% 40%, rgba(180,79,255,0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0,245,228,0.15) 0%, transparent 40%),
+    linear-gradient(135deg, #0d0a12 0%, #150a1f 100%);
+}
+.pv-1::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg, transparent, transparent 30px,
+    rgba(180,79,255,0.04) 30px, rgba(180,79,255,0.04) 31px
+  );
+}
+.pv-2 {
+  background:
+    radial-gradient(circle at 60% 30%, rgba(0,245,228,0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #080d0c 0%, #08131a 100%);
+}
+.pv-2::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    60deg, transparent 0px, transparent 20px,
+    rgba(0,245,228,0.04) 20px, rgba(0,245,228,0.04) 21px
+  );
+}
+.pv-3 {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(180,79,255,0.25) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(0,245,228,0.1) 0%, transparent 40%),
+    linear-gradient(135deg, #0b0a10 0%, #131018 100%);
+}
+.project-art {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0.6;
+}
+.project-art svg { width: 50%; height: 50%; }
+
+.project-info {
+  position: relative; z-index: 2;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(7,7,8,0.95) 0%, rgba(7,7,8,0.6) 60%, transparent 100%);
+}
+.project-cat {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+}
+.project-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+.project-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.project-arrow {
+  position: absolute;
+  top: 2rem; right: 2rem;
+  width: 36px; height: 36px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted);
+  font-size: 1.1rem;
+  z-index: 2;
+  transform: rotate(0deg);
+  transition: border-color 0.2s, color 0.2s, transform 0.3s;
+}
+.project-card:hover .project-arrow {
+  border-color: var(--purple);
+  color: var(--purple);
+  transform: rotate(45deg);
+}

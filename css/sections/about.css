@@ -1,0 +1,122 @@
+/* ── ABOUT / TEAM ─────────────────────────────────── */
+#about {
+  padding: 8rem 3rem;
+  background: var(--black);
+  border-top: 1px solid var(--border);
+}
+.about-layout {
+  max-width: 1300px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 8rem;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+}
+.about-frame {
+  position: absolute; inset: 0;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  overflow: hidden;
+}
+.about-frame-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(180,79,255,0.18) 0%, transparent 60%),
+    radial-gradient(circle at 80% 90%, rgba(0,245,228,0.08) 0%, transparent 40%);
+}
+.about-placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1rem;
+}
+.about-avatar-ring {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  border: 2px solid var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  box-shadow: 0 0 30px rgba(180,79,255,0.25);
+}
+.about-avatar-ring::before {
+  content: '';
+  position: absolute; inset: -8px;
+  border-radius: 50%;
+  border: 1px dashed rgba(180,79,255,0.35);
+  animation: spinSlow 10s linear infinite;
+}
+.about-avatar-inner {
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #110a1f, #1e0f38);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--purple);
+  letter-spacing: 0.05em;
+}
+.about-corner {
+  position: absolute;
+  width: 20px; height: 20px;
+  border-color: var(--cyan);
+  border-style: solid;
+}
+.about-corner.tl { top: 16px; left: 16px; border-width: 2px 0 0 2px; }
+.about-corner.tr { top: 16px; right: 16px; border-width: 2px 2px 0 0; }
+.about-corner.bl { bottom: 16px; left: 16px; border-width: 0 0 2px 2px; }
+.about-corner.br { bottom: 16px; right: 16px; border-width: 0 2px 2px 0; }
+.about-badge {
+  position: absolute;
+  bottom: 2rem; right: -1.5rem;
+  background: var(--purple);
+  color: var(--black);
+  padding: 0.8rem 1.2rem;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+.about-badge-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+.about-badge-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.about-content .section-title { margin-bottom: 0; }
+.about-content > p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin: 2rem 0 2.5rem;
+}
+.skill-item {
+  display: flex; align-items: center; gap: 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  transition: border-color 0.2s;
+}
+.skill-item:hover { border-color: rgba(0,245,228,0.3); }
+.skill-dot {
+  width: 6px; height: 6px;
+  background: var(--cyan);
+  transform: rotate(45deg); flex-shrink: 0;
+}
