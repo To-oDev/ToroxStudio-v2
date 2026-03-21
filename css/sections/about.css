@@ -135,6 +135,7 @@
   border: 1px solid var(--border);
   background: var(--panel);
   transition: all 0.3s;
+  cursor: pointer;
 }
 .skill-item strong { color: var(--white); display: block; margin-bottom: 2px; }
 .skill-item small { color: var(--cyan); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.05em; }
@@ -147,5 +148,133 @@
   width: 6px; height: 6px;
   background: var(--cyan);
   transform: rotate(45deg); flex-shrink: 0;
+}
+
+/* ── MODAL STYLES ────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  transform: translateY(30px);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.modal-overlay.active .modal-container {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: transform 0.3s;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: var(--purple);
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+  .modal-container {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+.modal-left {
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-img-frame {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-right {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .modal-right { padding: 2rem; }
+}
+
+.modal-header h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.modal-role {
+  color: var(--cyan);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.modal-desc {
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+.modal-footer {
+  margin-top: auto;
 }
 

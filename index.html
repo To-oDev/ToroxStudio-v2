@@ -314,34 +314,98 @@
         A diverse collective of specialists pushing the boundaries of what's possible on Roblox. From system architecture to music production, we craft every detail.
       </p>
       
-      <div class="skills-grid reveal reveal-delay-3" style="grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-        <div class="skill-item">
+      <div class="skills-grid reveal reveal-delay-3">
+        <!-- To.o -->
+        <div class="skill-item team-card" 
+             data-name="To.o" 
+             data-role="Founder & System Architect" 
+             data-desc="Architect of the Torox Ecosystem. Specialized in high-performance backends and complex system integration. Leading the vision of virtual beasts."
+             data-link="#">
           <div class="skill-dot"></div>
-          <div><strong>To.o</strong><br><small>Founder & System Architect</small></div>
+          <div>
+            <strong>To.o</strong>
+            <small>Founder & System Architect</small>
+            <!-- Hidden img for Vite to process correctly -->
+            <img src="./media/team/too.png" alt="To.o" style="display: none;" class="modal-source-img">
+          </div>
         </div>
-        <div class="skill-item">
+
+        <!-- Fabi -->
+        <div class="skill-item team-card" 
+             data-name="Fabi" 
+             data-role="Game Designer & Builder" 
+             data-desc="Creating playable worlds that feel alive. Expertise in level design and environmental storytelling within Roblox Studio.">
           <div class="skill-dot"></div>
-          <div><strong>Fabi</strong><br><small>Game Designer & Builder</small></div>
+          <div>
+            <strong>Fabi</strong>
+            <small>Game Designer & Builder</small>
+            <img src="./media/team/fabi.png" alt="Fabi" style="display: none;" class="modal-source-img">
+          </div>
         </div>
-        <div class="skill-item">
+
+        <!-- Jona -->
+        <div class="skill-item team-card" 
+             data-name="Jona" 
+             data-role="Lead Scripter & Builder" 
+             data-desc="Master of Luau engineering and complex game mechanics. Turning abstract concepts into functional, scalable code.">
           <div class="skill-dot"></div>
-          <div><strong>Jona</strong><br><small>Builder y scripter avanzado</small></div>
+          <div>
+            <strong>Jona</strong>
+            <small>Lead Scripter & Builder</small>
+            <img src="./media/team/jona.png" alt="Jona" style="display: none;" class="modal-source-img">
+          </div>
         </div>
-        <div class="skill-item">
+
+        <!-- Turok -->
+        <div class="skill-item team-card" 
+             data-name="Turok" 
+             data-role="Senior Animator" 
+             data-desc="Breathing life into characters. Specialized in fluid movement and cinematic animations for immersive experiences.">
           <div class="skill-dot"></div>
-          <div><strong>Turok</strong><br><small>Animador</small></div>
+          <div>
+            <strong>Turok</strong>
+            <small>Senior Animator</small>
+            <img src="./media/team/turok.png" alt="Turok" style="display: none;" class="modal-source-img">
+          </div>
         </div>
-        <div class="skill-item">
+
+        <!-- Cubo -->
+        <div class="skill-item team-card" 
+             data-name="Cubo" 
+             data-role="SFX Artist" 
+             data-desc="Designing the sounds of the beast. Expert in immersive audio landscapes and tactile feedback for game systems.">
           <div class="skill-dot"></div>
-          <div><strong>Cubo</strong><br><small>Artista SFX</small></div>
+          <div>
+            <strong>Cubo</strong>
+            <small>SFX Artist</small>
+            <img src="./media/team/cubo.png" alt="Cubo" style="display: none;" class="modal-source-img">
+          </div>
         </div>
-        <div class="skill-item">
+
+        <!-- Gustavo -->
+        <div class="skill-item team-card" 
+             data-name="Gustavo" 
+             data-role="Producer & Sound Designer" 
+             data-desc="The rhythmic heart of the studio. Orchestrating projects and composing original scores that define the Torox atmosphere.">
           <div class="skill-dot"></div>
-          <div><strong>Gustavo</strong><br><small>Producer & Sound Designer</small></div>
+          <div>
+            <strong>Gustavo</strong>
+            <small>Producer & Sound Designer</small>
+            <img src="./media/team/gustavo.png" alt="Gustavo" style="display: none;" class="modal-source-img">
+          </div>
         </div>
-        <div class="skill-item">
+
+        <!-- OKZER -->
+        <div class="skill-item team-card" 
+             data-name="OKZER" 
+             data-role="UI & Graphic Designer" 
+             data-desc="Visual architect of the interface. Designing seamless, futuristic UI/UX that prioritizes player intuition and style.">
           <div class="skill-dot"></div>
-          <div><strong>OKZER</strong><br><small>UI & Graphic Designer</small></div>
+          <div>
+            <strong>OKZER</strong>
+            <small>UI & Graphic Designer</small>
+            <img src="./media/team/okzer.png" alt="OKZER" style="display: none;" class="modal-source-img">
+          </div>
         </div>
       </div>
       <a href="#contact" class="btn-primary reveal reveal-delay-4">Work with us</a>
@@ -409,6 +473,30 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </footer>
+
+<!-- TEAM MODAL -->
+<div id="team-modal" class="modal-overlay">
+  <div class="modal-container">
+    <button class="modal-close">&times;</button>
+    <div class="modal-content">
+      <div class="modal-left">
+        <div class="modal-img-frame">
+          <img id="modal-img" src="" alt="Team Member">
+        </div>
+      </div>
+      <div class="modal-right">
+        <div class="modal-header">
+          <h3 id="modal-name">Member Name</h3>
+          <span id="modal-role" class="modal-role">Role</span>
+        </div>
+        <p id="modal-desc" class="modal-desc">Description goes here.</p>
+        <div id="modal-footer" class="modal-footer">
+          <a id="modal-link" href="#" class="btn-primary" target="_blank">View Portfolio ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script type="module" src="./js/main.js"></script>
 </body>
