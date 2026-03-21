@@ -7,6 +7,10 @@
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  #contact { padding: 6rem 1.5rem; }
+}
+
 #contact::before {
   content: '';
   position: absolute;
@@ -17,6 +21,19 @@
   background: radial-gradient(circle, rgba(180,79,255,0.09) 0%, transparent 70%);
   pointer-events: none;
 }
+.cta-seal {
+  width: 80px;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 15px rgba(180,79,255,0.4));
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+}
+#contact:hover .cta-seal {
+  transform: scale(1.1) rotate(5deg);
+  opacity: 1;
+}
+
 .cta-eyebrow {
   font-family: 'Fira Code', monospace;
   font-size: 0.75rem;
@@ -28,9 +45,13 @@
 }
 .cta-eyebrow::before,
 .cta-eyebrow::after { content: ''; width: 40px; height: 1px; background: var(--cyan); }
+@media (max-width: 480px) {
+  .cta-eyebrow::before, .cta-eyebrow::after { width: 20px; }
+}
+
 .cta-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-size: clamp(3.5rem, 10vw, 7rem);
   color: var(--white);
   line-height: 0.93;
   letter-spacing: 0.02em;
@@ -39,14 +60,22 @@
 .cta-title .acc { color: var(--purple); }
 .cta-sub {
   font-size: 1rem;
-  color: var(--muted);
+  color: var(--text);
   max-width: 480px;
   margin: 0 auto 3.5rem;
   line-height: 1.75;
+  transition: color 0.3s;
+}
+#contact:hover .cta-sub {
+  color: var(--white);
 }
 .cta-actions {
   display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
 }
+@media (max-width: 600px) {
+  .cta-actions .btn-primary, .cta-actions .btn-ghost { width: 100%; text-align: center; }
+}
+
 .cta-email {
   font-family: 'Fira Code', monospace;
   font-size: 0.8rem;
@@ -58,3 +87,4 @@
   transition: color 0.2s;
 }
 .cta-email:hover { color: var(--white); }
+

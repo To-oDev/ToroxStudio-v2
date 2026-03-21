@@ -1,16 +1,21 @@
 /* ── ABOUT / TEAM ─────────────────────────────────── */
 #about {
-  padding: 8rem 3rem;
+  padding: var(--section-pad);
   background: var(--black);
   border-top: 1px solid var(--border);
 }
 .about-layout {
-  max-width: 1300px; margin: 0 auto;
+  max-width: var(--container-max); margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 8rem;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .about-layout { grid-template-columns: 1fr; gap: 4rem; }
+  .about-visual { max-width: 500px; margin: 0 auto; width: 100%; }
+}
+
 .about-visual {
   position: relative;
   aspect-ratio: 4/5;
@@ -75,7 +80,12 @@
   color: var(--black);
   padding: 0.8rem 1.2rem;
   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  z-index: 10;
 }
+@media (max-width: 600px) {
+  .about-badge { right: 0; bottom: 1rem; transform: scale(0.9); }
+}
+
 .about-badge-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1rem;
@@ -90,12 +100,21 @@
   opacity: 0.7;
 }
 
-.about-content .section-title { margin-bottom: 0; }
+.about-content .section-title { margin-bottom: 1.5rem; }
+@media (max-width: 1024px) {
+  .about-content { text-align: center; }
+  .about-content .section-label { justify-content: center; }
+}
+
 .about-content > p {
   font-size: 1rem;
   line-height: 1.85;
   color: var(--text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  transition: color 0.3s;
+}
+.about-content > p:hover {
+  color: var(--white);
 }
 .skills-grid {
   display: grid;
@@ -103,20 +122,30 @@
   gap: 0.8rem;
   margin: 2rem 0 2.5rem;
 }
+@media (max-width: 600px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
+
 .skill-item {
   display: flex; align-items: center; gap: 0.8rem;
   font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-weight: 500;
   color: var(--text);
-  padding: 0.7rem 1rem;
+  padding: 1rem;
   border: 1px solid var(--border);
   background: var(--panel);
-  transition: border-color 0.2s;
+  transition: all 0.3s;
 }
-.skill-item:hover { border-color: rgba(0,245,228,0.3); }
+.skill-item strong { color: var(--white); display: block; margin-bottom: 2px; }
+.skill-item small { color: var(--cyan); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.05em; }
+.skill-item:hover { 
+  border-color: rgba(0,245,228,0.3); 
+  transform: translateY(-2px); 
+  color: var(--white);
+}
 .skill-dot {
   width: 6px; height: 6px;
   background: var(--cyan);
   transform: rotate(45deg); flex-shrink: 0;
 }
+

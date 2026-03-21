@@ -59,6 +59,15 @@ body:has(button:hover) #cursor-ring { width: 56px; height: 56px; }
   border: 1px solid var(--cyan-dim);
   padding: 0.2rem 0.6rem;
   text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+/* Specific hover linkage for service cards */
+.service-card:hover .tag {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  text-shadow: 0 0 8px rgba(0,245,228,0.4);
+  box-shadow: 0 0 8px rgba(0,245,228,0.1);
 }
 
 /* ── SCROLL REVEAL ────────────────────────────────── */

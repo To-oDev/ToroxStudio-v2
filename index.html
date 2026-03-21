@@ -6,7 +6,7 @@
 <title>Torox Studio — Building Virtual Beasts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="#" class="nav-logo">
-    <div class="logo-mark"></div>
+    <img src="./media/torox-logo-no-tratado.png" alt="Torox Logo">
     TOROX<span>.</span>
   </a>
   <ul class="nav-links">
@@ -29,6 +29,12 @@
     <li><a href="#process">Process</a></li>
     <li><a href="#contact" class="nav-cta">Start a project</a></li>
   </ul>
+  <div id="burger-menu" class="burger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
 </nav>
 
 <!-- HERO -->
@@ -42,13 +48,13 @@
       TOROX
       <span class="accent">STUDIO</span>
     </h1>
-    <p class="hero-sub">Building Virtual Beasts</p>
+    <p class="hero-sub">BUILDING VIRTUAL BEASTS</p>
     <p class="hero-desc">
-      We craft immersive Roblox experiences for brands and companies ready to dominate the metaverse. From concept to launch — engineered for scale, built to captivate.
+      We create immersive and engaging experiences on Roblox. From concept to launch — engineered for scale, built to captivate.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Start a project</a>
-      <a href="#work" class="btn-ghost">See our work</a>
+      <a href="#work" class="btn-ghost">Explore our work</a>
     </div>
   </div>
 
@@ -67,11 +73,49 @@
       <!-- Core -->
       <div class="beast-core">
         <div class="beast-hex">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+            <defs>
+              <filter id="wire-glow">
+                <feGaussianBlur stdDeviation="0.6" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
             <polygon points="50,5 93,27.5 93,72.5 50,95 7,72.5 7,27.5" fill="#0e0820" stroke="#b44fff" stroke-width="1.5"/>
             <polygon points="50,18 82,34.5 82,65.5 50,82 18,65.5 18,34.5" fill="#08051a" stroke="rgba(180,79,255,0.45)" stroke-width="1"/>
-            <text x="50" y="57" text-anchor="middle" fill="#b44fff" font-family="Bebas Neue, sans-serif" font-size="22" letter-spacing="2">TX</text>
-            <circle cx="50" cy="50" r="8" fill="none" stroke="#00f5e4" stroke-width="0.8" opacity="0.5"/>
+            
+            <!-- Wireframe Bull (Exact Brand Trace - Scaled 2.2x) -->
+            <g transform="translate(50, 50) scale(2.2) translate(-50, -50)">
+              <path class="wire" d="M50 35 L42 30 L35 38 L25 35 L5 10 L15 35 L32 46 L20 50 L28 55 L35 65 L44 88 L42 95 L50 98 L58 95 L56 88 L65 65 L72 55 L80 50 L68 46 L85 35 L95 10 L75 35 L65 38 L58 30 Z" style="filter: url(#wire-glow);" />
+              <path class="wire" d="M35 38 L42 48 L50 35 L58 48 L65 38 M42 48 L58 48 M42 48 L50 65 L58 48 M32 46 L42 48 M68 46 L58 48 M42 48 L35 65 M58 48 L65 65 M44 88 L50 65 L56 88 M50 98 L50 65" />
+              <path class="wire" d="M5 10 L32 46 M95 10 L68 46 M15 35 L32 46 M85 35 L68 46" />
+              <path class="wire" d="M20 50 L35 65 M80 50 L65 65" />
+              
+              <circle class="dot" cx="50" cy="35" r="0.7" />
+              <circle class="dot" cx="42" cy="30" r="0.7" />
+              <circle class="dot" cx="35" cy="38" r="0.7" />
+              <circle class="dot" cx="25" cy="35" r="0.7" />
+              <circle class="dot" cx="5" cy="10" r="0.7" />
+              <circle class="dot" cx="15" cy="35" r="0.7" />
+              <circle class="dot" cx="32" cy="46" r="0.7" />
+              <circle class="dot" cx="20" cy="50" r="0.7" />
+              <circle class="dot" cx="28" cy="55" r="0.7" />
+              <circle class="dot" cx="35" cy="65" r="0.7" />
+              <circle class="dot" cx="44" cy="88" r="0.7" />
+              <circle class="dot" cx="50" cy="98" r="0.7" />
+              <circle class="dot" cx="56" cy="88" r="0.7" />
+              <circle class="dot" cx="65" cy="65" r="0.7" />
+              <circle class="dot" cx="72" cy="55" r="0.7" />
+              <circle class="dot" cx="80" cy="50" r="0.7" />
+              <circle class="dot" cx="68" cy="46" r="0.7" />
+              <circle class="dot" cx="85" cy="35" r="0.7" />
+              <circle class="dot" cx="95" cy="10" r="0.7" />
+              <circle class="dot" cx="75" cy="35" r="0.7" />
+              <circle class="dot" cx="65" cy="38" r="0.7" />
+              <circle class="dot" cx="58" cy="30" r="0.7" />
+              <circle class="dot" cx="42" cy="48" r="0.7" />
+              <circle class="dot" cx="58" cy="48" r="0.7" />
+              <circle class="dot" cx="50" cy="65" r="0.7" />
+            </g>
           </svg>
         </div>
       </div>
@@ -199,62 +243,42 @@
   </div>
 
   <div class="work-grid reveal">
-    <!-- Featured project -->
-    <div class="project-card featured">
-      <div class="project-visual pv-1">
-        <div class="project-art">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="60" y="20" width="80" height="80" rx="4" stroke="rgba(180,79,255,0.4)" stroke-width="1" fill="none"/>
-            <rect x="80" y="100" width="40" height="80" rx="2" stroke="rgba(180,79,255,0.3)" stroke-width="1" fill="none"/>
-            <circle cx="100" cy="60" r="20" stroke="rgba(180,79,255,0.5)" stroke-width="1.5" fill="rgba(180,79,255,0.05)"/>
-            <line x1="20" y1="100" x2="180" y2="100" stroke="rgba(0,245,228,0.2)" stroke-width="0.5"/>
-            <line x1="100" y1="10" x2="100" y2="190" stroke="rgba(0,245,228,0.15)" stroke-width="0.5"/>
-          </svg>
-        </div>
+    <!-- Project 1: ToroxCity -->
+    <a href="#" class="project-card featured">
+      <div class="project-visual">
+        <img src="./media/media/torox-city.png" alt="ToroxCity">
       </div>
       <div class="project-arrow">↗</div>
       <div class="project-info">
-        <div class="project-cat">Brand Activation · 2024</div>
-        <div class="project-name">NEON DISTRICT EXPERIENCE</div>
-        <div class="project-desc">Full open-world brand experience for a streetwear label. 2M+ visits in first month. Custom avatar gear, challenges, and exclusive drops.</div>
+        <div class="project-cat">Prototype City · 2024</div>
+        <div class="project-name">TOROXCITY</div>
+        <div class="project-desc">A prototype city built by Torox Industries, where players live, play, and interact with emerging systems deployed across the urban grid.</div>
+      </div>
+    </a>
+
+    <!-- Project 2: Drifting Driver (Video) -->
+    <div class="project-card">
+      <div class="project-visual">
+        <video src="./media/media/drifting-proto.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-info">
+        <div class="project-cat">Racing · 2024</div>
+        <div class="project-name">DRIFTING DRIVER</div>
+        <div class="project-desc">Drifting races with semi realistic physics where mastering the drift is everything.</div>
       </div>
     </div>
 
-    <!-- Side projects -->
+    <!-- Project 3: AdverWorlds -->
     <div class="project-card">
-      <div class="project-visual pv-2">
-        <div class="project-art">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="100,20 170,60 170,140 100,180 30,140 30,60" stroke="rgba(180,79,255,0.4)" stroke-width="1" fill="none"/>
-            <polygon points="100,50 140,72 140,128 100,150 60,128 60,72" stroke="rgba(0,245,228,0.25)" stroke-width="0.8" fill="none"/>
-            <circle cx="100" cy="100" r="15" stroke="rgba(0,245,228,0.5)" stroke-width="1" fill="rgba(0,245,228,0.05)"/>
-          </svg>
-        </div>
+      <div class="project-visual">
+        <img src="./media/media/torox-brandworks.png" alt="AdverWorlds">
       </div>
       <div class="project-arrow">↗</div>
       <div class="project-info">
-        <div class="project-cat">Game Development · 2024</div>
-        <div class="project-name">VOID RUNNERS</div>
-        <div class="project-desc">Competitive parkour-RPG with custom IK avatar system and ranked matchmaking.</div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-visual pv-3">
-        <div class="project-art">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="30" width="60" height="60" stroke="rgba(180,79,255,0.35)" stroke-width="1" fill="none"/>
-            <rect x="110" y="30" width="60" height="60" stroke="rgba(180,79,255,0.25)" stroke-width="1" fill="none"/>
-            <rect x="30" y="110" width="60" height="60" stroke="rgba(180,79,255,0.2)" stroke-width="1" fill="none"/>
-            <rect x="110" y="110" width="60" height="60" stroke="rgba(0,245,228,0.3)" stroke-width="1" fill="none"/>
-          </svg>
-        </div>
-      </div>
-      <div class="project-arrow">↗</div>
-      <div class="project-info">
-        <div class="project-cat">Systems Architecture · 2025</div>
-        <div class="project-name">TOROX ENGINE</div>
-        <div class="project-desc">Internal Luau framework powering all Torox projects. Open for enterprise licensing.</div>
+        <div class="project-cat">Branded Experience · 2024</div>
+        <div class="project-name">ADVERWORLDS</div>
+        <div class="project-desc">Branded games we developed for major clients — made to engage, not interrupt.</div>
       </div>
     </div>
   </div>
@@ -274,34 +298,51 @@
           <div class="about-avatar-ring">
             <div class="about-avatar-inner">TX</div>
           </div>
-          <div style="text-align:center; margin-top:1rem;">
-            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.5rem; color:var(--white); letter-spacing:0.08em;">YOUR NAME HERE</div>
-            <div style="font-family:'Fira Code',monospace; font-size:0.7rem; color:var(--cyan); letter-spacing:0.15em; text-transform:uppercase; margin-top:0.3rem;">Founder & Lead Developer</div>
-          </div>
+          <img src="./media/torox-logo-no-tratado.png" alt="Torox Industries" style="width: 200px; opacity: 0.15; position: absolute; bottom: -20px;">
         </div>
       </div>
       <div class="about-badge">
-        <div class="about-badge-title">TOROX STUDIO</div>
-        <div class="about-badge-sub">Est. 2022 · Roblox</div>
+        <div class="about-badge-title">7 SPECIALISTS</div>
+        <div class="about-badge-sub">Ready for Deploy</div>
       </div>
     </div>
 
     <div class="about-content">
-      <div class="section-label reveal">The Beast Behind the Studio</div>
-      <h2 class="section-title reveal reveal-delay-1">BUILT BY<br>A <span class="acc">DEVELOPER</span><br>WHO PLAYS</h2>
+      <div class="section-label reveal">The Beasts Behind the Studio</div>
+      <h2 class="section-title reveal reveal-delay-1">THE <span class="acc">CORE</span> SQUAD</h2>
       <p class="reveal reveal-delay-2">
-        Torox Studio is a solo-founded Roblox development studio focused on creating high-quality games and brand experiences. Every project is personally crafted — no outsourced corners cut, no generic templates.
+        A diverse collective of specialists pushing the boundaries of what's possible on Roblox. From system architecture to music production, we craft every detail.
       </p>
-      <p class="reveal reveal-delay-2">
-        With a background spanning game systems architecture, 3D environment design, and UI engineering, Torox brings a complete technical and creative vision to every build.
-      </p>
-      <div class="skills-grid reveal reveal-delay-3">
-        <div class="skill-item"><span class="skill-dot"></span>Luau / Roblox Studio</div>
-        <div class="skill-item"><span class="skill-dot"></span>Game Systems Design</div>
-        <div class="skill-item"><span class="skill-dot"></span>3D Environment Art</div>
-        <div class="skill-item"><span class="skill-dot"></span>UI / UX Design</div>
-        <div class="skill-item"><span class="skill-dot"></span>Avatar & IK Systems</div>
-        <div class="skill-item"><span class="skill-dot"></span>Game Economy Design</div>
+      
+      <div class="skills-grid reveal reveal-delay-3" style="grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+        <div class="skill-item">
+          <div class="skill-dot"></div>
+          <div><strong>To.o</strong><br><small>Founder & System Architect</small></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>
+          <div><strong>Fabi</strong><br><small>Game Designer & Builder</small></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>
+          <div><strong>Jona</strong><br><small>Builder y scripter avanzado</small></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>
+          <div><strong>Turok</strong><br><small>Animador</small></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>
+          <div><strong>Cubo</strong><br><small>Artista SFX</small></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>
+          <div><strong>Gustavo</strong><br><small>Producer & Sound Designer</small></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>
+          <div><strong>OKZER</strong><br><small>UI & Graphic Designer</small></div>
+        </div>
       </div>
       <a href="#contact" class="btn-primary reveal reveal-delay-4">Work with us</a>
     </div>
@@ -343,6 +384,7 @@
 
 <!-- CTA / CONTACT -->
 <section id="contact">
+  <img src="./media/torox-logo-no-tratado.png" alt="Torox Seal" class="cta-seal">
   <div class="cta-eyebrow">Ready to build?</div>
   <h2 class="cta-title">LET'S<br>BIRTH A<br><span class="acc">BEAST</span></h2>
   <p class="cta-sub">
@@ -368,6 +410,6 @@
   </ul>
 </footer>
 
-<script type="module" src="js/main.js"></script>
+<script type="module" src="./js/main.js"></script>
 </body>
 </html>

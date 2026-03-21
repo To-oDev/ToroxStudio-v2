@@ -1,3 +1,17 @@
+:root {
+  --section-pad: 8rem 3rem;
+  --container-max: 1300px;
+}
+
+@media (max-width: 1024px) {
+  :root { --section-pad: 6rem 2rem; }
+}
+@media (max-width: 768px) {
+  :root { --section-pad: 5rem 1.5rem; }
+  body { cursor: auto !important; }
+  #cursor { display: none !important; }
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -21,7 +35,7 @@ body::before {
 }
 
 /* ── SECTIONS COMMON ──────────────────────────────── */
-section { position: relative; }
+section { position: relative; padding: var(--section-pad); }
 
 .section-label {
   font-family: 'Fira Code', monospace;
@@ -36,10 +50,11 @@ section { position: relative; }
 
 .section-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
   color: var(--white);
   line-height: 0.95;
   letter-spacing: 0.03em;
   margin-bottom: 1.5rem;
 }
 .section-title .acc { color: var(--purple); }
+
