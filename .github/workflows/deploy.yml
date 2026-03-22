@@ -19,7 +19,7 @@ jobs:
           cache: 'npm'
 
       - name: Install
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
@@ -31,7 +31,9 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           port: 22
-          script: cd public_html && rm -rf *
+          script: |
+            cd public_html
+            rm -rf *
 
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
@@ -42,3 +44,4 @@ jobs:
           port: 22
           source: "dist/*"
           target: "public_html/"
+          strip_components: 1
