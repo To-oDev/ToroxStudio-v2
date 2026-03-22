@@ -18,11 +18,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: access-5020056254.webspace-host.com
+          host: access-5020056254.webspace-host.com
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./dist/
-          server-dir: /public_html/
+          port: 22
+          source: "dist/*"
+          target: "/public_html/"
