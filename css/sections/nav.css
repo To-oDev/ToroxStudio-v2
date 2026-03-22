@@ -113,3 +113,43 @@ nav.scrolled {
 .nav-cta:hover { background: var(--cyan) !important; color: var(--black) !important; }
 .nav-cta::after { display: none !important; }
 
+
+/* Language Toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+  z-index: 1001;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.lang-btn.active {
+  background: var(--purple);
+  color: var(--black);
+  border-color: var(--purple);
+}
+
+.lang-btn:hover:not(.active) {
+  border-color: var(--purple);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .lang-toggle {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+}

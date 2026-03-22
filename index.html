@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,12 +23,16 @@
     TOROX<span>.</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#contact" class="nav-cta">Start a project</a></li>
+    <li><a href="#services" data-i18n="nav-services">Servicios</a></li>
+    <li><a href="#work" data-i18n="nav-work">Portafolio</a></li>
+    <li><a href="#about" data-i18n="nav-about">Nosotros</a></li>
+    <li><a href="#process" data-i18n="nav-process">Proceso</a></li>
+    <li><a href="#contact" class="nav-cta" data-i18n="nav-cta">Iniciar Proyecto</a></li>
   </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
   <div id="burger-menu" class="burger-menu">
     <span></span>
     <span></span>
@@ -43,18 +47,18 @@
   <div class="hero-grid"></div>
 
   <div class="hero-left">
-    <div class="hero-eyebrow">Roblox Game Studio</div>
+    <div class="hero-eyebrow" data-i18n="hero-eyebrow">Roblox Game Studio</div>
     <h1 class="hero-title">
       TOROX
-      <span class="accent">STUDIO</span>
+      <span class="accent" data-i18n="hero-title-accent">STUDIO</span>
     </h1>
-    <p class="hero-sub">BUILDING VIRTUAL BEASTS</p>
-    <p class="hero-desc">
-      We create immersive and engaging experiences on Roblox. From concept to launch — engineered for scale, built to captivate.
+    <p class="hero-sub" data-i18n="hero-sub">CONSTRUYENDO BESTIAS VIRTUALES</p>
+    <p class="hero-desc" data-i18n="hero-desc">
+      Creamos experiencias inmersivas y atractivas en Roblox. Desde el concepto hasta el lanzamiento: ingeniería para escalar, construida para cautivar.
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Start a project</a>
-      <a href="#work" class="btn-ghost">Explore our work</a>
+      <a href="#contact" class="btn-primary" data-i18n="hero-btn-start">Iniciar Proyecto</a>
+      <a href="#work" class="btn-ghost" data-i18n="hero-btn-explore">Explorar Portafolio</a>
     </div>
   </div>
 
@@ -125,15 +129,15 @@
   <div class="hero-stats">
     <div class="stat-item">
       <div class="stat-num">12<span>+</span></div>
-      <div class="stat-label">Projects Shipped</div>
+      <div class="stat-label" data-i18n="stat-projects-label">Proyectos Lanzados</div>
     </div>
     <div class="stat-item">
       <div class="stat-num">5<span>M+</span></div>
-      <div class="stat-label">Player Sessions</div>
+      <div class="stat-label" data-i18n="stat-sessions-label">Sesiones de Jugadores</div>
     </div>
     <div class="stat-item">
       <div class="stat-num">3<span>+</span></div>
-      <div class="stat-label">Years in Roblox</div>
+      <div class="stat-label" data-i18n="stat-years-label">Años en Roblox</div>
     </div>
   </div>
 </section>
@@ -142,20 +146,20 @@
 <div class="marquee-section">
   <div class="marquee-track">
     <!-- doubled for seamless loop -->
-    <div class="marquee-item"><span class="dot"></span> Roblox Game Development</div>
-    <div class="marquee-item"><span class="dot"></span> Brand Activations</div>
-    <div class="marquee-item"><span class="dot"></span> Luau Engineering</div>
-    <div class="marquee-item"><span class="dot"></span> 3D World Design</div>
-    <div class="marquee-item"><span class="dot"></span> Game Systems Architecture</div>
-    <div class="marquee-item"><span class="dot"></span> UI / UX for Games</div>
-    <div class="marquee-item"><span class="dot"></span> Monetization Strategy</div>
-    <div class="marquee-item"><span class="dot"></span> Roblox Game Development</div>
-    <div class="marquee-item"><span class="dot"></span> Brand Activations</div>
-    <div class="marquee-item"><span class="dot"></span> Luau Engineering</div>
-    <div class="marquee-item"><span class="dot"></span> 3D World Design</div>
-    <div class="marquee-item"><span class="dot"></span> Game Systems Architecture</div>
-    <div class="marquee-item"><span class="dot"></span> UI / UX for Games</div>
-    <div class="marquee-item"><span class="dot"></span> Monetization Strategy</div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-1">Desarrollo de Juegos Roblox</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-2">Activaciones de Marca</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-3">Ingeniería Luau</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-4">Diseño de Mundos 3D</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-5">Arquitectura de Sistemas de Juego</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-6">UI / UX para Juegos</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-7">Estrategia de Monetización</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-1">Desarrollo de Juegos Roblox</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-2">Activaciones de Marca</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-3">Ingeniería Luau</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-4">Diseño de Mundos 3D</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-5">Arquitectura de Sistemas de Juego</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-6">UI / UX para Juegos</span></div>
+    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-7">Estrategia de Monetización</span></div>
   </div>
 </div>
 
@@ -163,68 +167,68 @@
 <section id="services">
   <div class="services-layout">
     <div class="services-intro">
-      <div class="section-label reveal">Our Weapons</div>
-      <h2 class="section-title reveal reveal-delay-1">WHAT<br>WE<br><span class="acc">BUILD</span></h2>
-      <p class="reveal reveal-delay-2">From brand experiences to fully-realized game worlds. We engineer Roblox products that don't just exist — they dominate.</p>
+      <div class="section-label reveal" data-i18n="services-label">Nuestras Armas</div>
+      <h2 class="section-title reveal reveal-delay-1" data-i18n="services-title">QUÉ<br>CONSTRUIMOS</h2>
+      <p class="reveal reveal-delay-2" data-i18n="services-desc">Desde experiencias de marca hasta mundos de juego completos. Diseñamos productos de Roblox que no solo existen, sino que dominan.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-num">01</div>
         <div class="service-body">
-          <div class="service-name">Brand Experience Worlds</div>
-          <div class="service-desc">Full-scale immersive environments for brands entering Roblox. We translate your identity into a living, playable world your audience won't forget.</div>
+          <div class="service-name" data-i18n="service-1-name">Mundos de Experiencia de Marca</div>
+          <div class="service-desc" data-i18n="service-1-desc">Entornos inmersivos a gran escala para marcas que ingresan a Roblox. Traducimos su identidad en un mundo vivo y jugable que su audiencia no olvidará.</div>
           <div class="service-tags">
-            <span class="tag">World Design</span>
-            <span class="tag">Brand Identity</span>
-            <span class="tag">Engagement Systems</span>
+            <span class="tag" data-i18n="service-1-tag-1">Diseño de Mundos</span>
+            <span class="tag" data-i18n="service-1-tag-2">Identidad de Marca</span>
+            <span class="tag" data-i18n="service-1-tag-3">Sistemas de Engagement</span>
           </div>
         </div>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">02</div>
         <div class="service-body">
-          <div class="service-name">Game Systems Engineering</div>
-          <div class="service-desc">Deep Luau architecture: combat, progression, economies, avatar systems. Scalable, clean code built to handle millions of concurrent players.</div>
+          <div class="service-name" data-i18n="service-2-name">Ingeniería de Sistemas de Juego</div>
+          <div class="service-desc" data-i18n="service-2-desc">Arquitectura profunda en Luau: combate, progresión, economías, sistemas de avatares. Código limpio y escalable para millones de jugadores concurrentes.</div>
           <div class="service-tags">
-            <span class="tag">Luau</span>
-            <span class="tag">Systems Design</span>
-            <span class="tag">Performance</span>
+            <span class="tag" data-i18n="service-2-tag-1">Luau</span>
+            <span class="tag" data-i18n="service-2-tag-2">Diseño de Sistemas</span>
+            <span class="tag" data-i18n="service-2-tag-3">Rendimiento</span>
           </div>
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">03</div>
         <div class="service-body">
-          <div class="service-name">Game UI / UX Design</div>
-          <div class="service-desc">Interfaces that feel native to the game world. Menus, HUDs, inventory systems, and onboarding flows designed for maximum player retention.</div>
+          <div class="service-name" data-i18n="service-3-name">Diseño UI / UX de Juego</div>
+          <div class="service-desc" data-i18n="service-3-desc">Interfaces que se sienten nativas en el mundo del juego. Menús, HUDs, sistemas de inventario y flujos de incorporación diseñados para la máxima retención de jugadores.</div>
           <div class="service-tags">
-            <span class="tag">UI Design</span>
-            <span class="tag">Player Retention</span>
-            <span class="tag">Roblox GUI</span>
+            <span class="tag" data-i18n="service-3-tag-1">Diseño UI</span>
+            <span class="tag" data-i18n="service-3-tag-2">Retención de Jugadores</span>
+            <span class="tag" data-i18n="service-3-tag-3">Roblox GUI</span>
           </div>
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
         <div class="service-num">04</div>
         <div class="service-body">
-          <div class="service-name">3D Environment & Asset Production</div>
-          <div class="service-desc">Handcrafted 3D environments, props, and character assets built for Roblox Studio. Optimized for performance without sacrificing visual quality.</div>
+          <div class="service-name" data-i18n="service-4-name">Producción de Entornos y Activos 3D</div>
+          <div class="service-desc" data-i18n="service-4-desc">Entornos 3D hechos a mano, props y activos de personajes construidos para Roblox Studio. Optimizados para el rendimiento sin sacrificar la calidad visual.</div>
           <div class="service-tags">
-            <span class="tag">3D Modeling</span>
-            <span class="tag">Roblox Studio</span>
-            <span class="tag">Optimization</span>
+            <span class="tag" data-i18n="service-4-tag-1">Modelado 3D</span>
+            <span class="tag" data-i18n="service-4-tag-2">Roblox Studio</span>
+            <span class="tag" data-i18n="service-4-tag-3">Optimización</span>
           </div>
         </div>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">05</div>
         <div class="service-body">
-          <div class="service-name">Monetization & Live Ops</div>
-          <div class="service-desc">Battle passes, gamepass strategies, seasonal events, and virtual economies designed to maximize revenue without killing player experience.</div>
+          <div class="service-name" data-i18n="service-5-name">Monetization y Live Ops</div>
+          <div class="service-desc" data-i18n="service-5-desc">Battle passes, estrategias de gamepasses, eventos estacionales y economías virtuales diseñadas para maximizar ingresos sin afectar la experiencia del jugador.</div>
           <div class="service-tags">
-            <span class="tag">Robux Economy</span>
-            <span class="tag">Live Events</span>
-            <span class="tag">Retention</span>
+            <span class="tag" data-i18n="service-5-tag-1">Economía Robux</span>
+            <span class="tag" data-i18n="service-5-tag-2">Eventos en Vivo</span>
+            <span class="tag" data-i18n="service-5-tag-3">Retención</span>
           </div>
         </div>
       </div>
@@ -236,10 +240,10 @@
 <section id="work">
   <div class="work-header">
     <div>
-      <div class="section-label reveal">Selected Work</div>
-      <h2 class="section-title reveal reveal-delay-1">THE<br><span class="acc">BEASTS</span><br>WE BUILT</h2>
+      <div class="section-label reveal" data-i18n="work-label">Trabajos Seleccionados</div>
+      <h2 class="section-title reveal reveal-delay-1" data-i18n="work-title">LAS<br>BESTIAS<br>QUE CREAMOS</h2>
     </div>
-    <a href="#contact" class="btn-ghost reveal reveal-delay-2">View all projects ↗</a>
+    <a href="#contact" class="btn-ghost reveal reveal-delay-2" data-i18n="work-view-all">Ver todos los proyectos ↗</a>
   </div>
 
   <div class="work-grid reveal">
@@ -250,9 +254,9 @@
       </div>
       <div class="project-arrow">↗</div>
       <div class="project-info">
-        <div class="project-cat">Prototype City · 2024</div>
-        <div class="project-name">TOROXCITY</div>
-        <div class="project-desc">A prototype city built by Torox Industries, where players live, play, and interact with emerging systems deployed across the urban grid.</div>
+        <div class="project-cat" data-i18n="project-1-cat">Ciudad Prototipo · 2024</div>
+        <div class="project-name" data-i18n="project-1-name">TOROXCITY</div>
+        <div class="project-desc" data-i18n="project-1-desc">Una ciudad prototipo construida por Industrias Torox, donde los jugadores viven, juegan e interactúan con sistemas emergentes desplegados en la red urbana.</div>
       </div>
     </a>
 
@@ -263,9 +267,9 @@
       </div>
       <div class="project-arrow">↗</div>
       <div class="project-info">
-        <div class="project-cat">Racing · 2024</div>
-        <div class="project-name">DRIFTING DRIVER</div>
-        <div class="project-desc">Drifting races with semi realistic physics where mastering the drift is everything.</div>
+        <div class="project-cat" data-i18n="project-2-cat">Carreras · 2024</div>
+        <div class="project-name" data-i18n="project-2-name">DRIFTING DRIVER</div>
+        <div class="project-desc" data-i18n="project-2-desc">Carreras de drifting con física semi-realista donde dominar el derrape lo es todo.</div>
       </div>
     </div>
 
@@ -276,9 +280,9 @@
       </div>
       <div class="project-arrow">↗</div>
       <div class="project-info">
-        <div class="project-cat">Branded Experience · 2024</div>
-        <div class="project-name">ADVERWORLDS</div>
-        <div class="project-desc">Branded games we developed for major clients — made to engage, not interrupt.</div>
+        <div class="project-cat" data-i18n="project-3-cat">Experiencia de Marca · 2024</div>
+        <div class="project-name" data-i18n="project-3-name">ADVERWORLDS</div>
+        <div class="project-desc" data-i18n="project-3-desc">Juegos de marca que desarrollamos para clientes importantes, diseñados para cautivar, no para interrumpir.</div>
       </div>
     </div>
   </div>
@@ -302,29 +306,31 @@
         </div>
       </div>
       <div class="about-badge">
-        <div class="about-badge-title">7 SPECIALISTS</div>
-        <div class="about-badge-sub">Ready for Deploy</div>
+        <div class="about-badge-title" data-i18n="about-badge-title">7 ESPECIALISTAS</div>
+        <div class="about-badge-sub" data-i18n="about-badge-sub">Listos para el Despliegue</div>
       </div>
     </div>
 
     <div class="about-content">
-      <div class="section-label reveal">The Beasts Behind the Studio</div>
-      <h2 class="section-title reveal reveal-delay-1">THE <span class="acc">CORE</span> SQUAD</h2>
-      <p class="reveal reveal-delay-2">
-        A diverse collective of specialists pushing the boundaries of what's possible on Roblox. From system architecture to music production, we craft every detail.
+      <div class="section-label reveal" data-i18n="about-label">Las Bestias Detrás del Studio</div>
+      <h2 class="section-title reveal reveal-delay-1" data-i18n="about-title">EL SQUAD <span class="acc">CORE</span></h2>
+      <p class="reveal reveal-delay-2" data-i18n="about-desc">
+        Un colectivo diverso de especialistas ampliando los límites de lo posible en Roblox. Desde la arquitectura de sistemas hasta la producción musical, cuidamos cada detalle.
       </p>
       
       <div class="skills-grid reveal reveal-delay-3">
         <!-- To.o -->
         <div class="skill-item team-card" 
              data-name="To.o" 
-             data-role="Founder & System Architect" 
-             data-desc="Architect of the Torox Ecosystem. Specialized in high-performance backends and complex system integration. Leading the vision of virtual beasts."
+             data-role="Fundador y Arquitecto de Sistemas" 
+             data-desc="Arquitecto del Ecosistema Torox. Especializado en backends de alto rendimiento e integración de sistemas complejos. Liderando la visión de las bestias virtuales."
+             data-i18n-role="team-too-role"
+             data-i18n-desc="team-too-desc"
              data-link="#">
           <div class="skill-dot"></div>
           <div>
             <strong>To.o</strong>
-            <small>Founder & System Architect</small>
+            <small data-i18n="team-too-role">Fundador y Arquitecto de Sistemas</small>
             <!-- Hidden img for Vite to process correctly -->
             <img src="./media/team/too.png" alt="To.o" style="display: none;" class="modal-source-img">
           </div>
@@ -333,12 +339,14 @@
         <!-- Fabi -->
         <div class="skill-item team-card" 
              data-name="Fabi" 
-             data-role="Game Designer & Builder" 
-             data-desc="Creating playable worlds that feel alive. Expertise in level design and environmental storytelling within Roblox Studio.">
+             data-role="Diseñador de Juegos y Constructor" 
+             data-desc="Creando mundos jugables que se sienten vivos. Experto en diseño de niveles y narrativa ambiental dentro de Roblox Studio."
+             data-i18n-role="team-fabi-role"
+             data-i18n-desc="team-fabi-desc">
           <div class="skill-dot"></div>
           <div>
             <strong>Fabi</strong>
-            <small>Game Designer & Builder</small>
+            <small data-i18n="team-fabi-role">Diseñador de Juegos y Constructor</small>
             <img src="./media/team/fabi.png" alt="Fabi" style="display: none;" class="modal-source-img">
           </div>
         </div>
@@ -346,12 +354,14 @@
         <!-- Jona -->
         <div class="skill-item team-card" 
              data-name="Jona" 
-             data-role="Lead Scripter & Builder" 
-             data-desc="Master of Luau engineering and complex game mechanics. Turning abstract concepts into functional, scalable code.">
+             data-role="Scripter Principal y Constructor" 
+             data-desc="Maestro de ingeniería Luau y mecánicas de juego complejas. Convirtiendo conceptos abstractos en código funcional y escalable."
+             data-i18n-role="team-jona-role"
+             data-i18n-desc="team-jona-desc">
           <div class="skill-dot"></div>
           <div>
             <strong>Jona</strong>
-            <small>Lead Scripter & Builder</small>
+            <small data-i18n="team-jona-role">Scripter Principal y Constructor</small>
             <img src="./media/team/jona.png" alt="Jona" style="display: none;" class="modal-source-img">
           </div>
         </div>
@@ -359,12 +369,14 @@
         <!-- Turok -->
         <div class="skill-item team-card" 
              data-name="Turok" 
-             data-role="Senior Animator" 
-             data-desc="Breathing life into characters. Specialized in fluid movement and cinematic animations for immersive experiences.">
+             data-role="Animador Senior" 
+             data-desc="Dando vida a los personajes. Especializado en movimientos fluidos y animaciones cinemáticas para experiencias inmersivas."
+             data-i18n-role="team-turok-role"
+             data-i18n-desc="team-turok-desc">
           <div class="skill-dot"></div>
           <div>
             <strong>Turok</strong>
-            <small>Senior Animator</small>
+            <small data-i18n="team-turok-role">Animador Senior</small>
             <img src="./media/team/turok.png" alt="Turok" style="display: none;" class="modal-source-img">
           </div>
         </div>
@@ -372,12 +384,14 @@
         <!-- Cubo -->
         <div class="skill-item team-card" 
              data-name="Cubo" 
-             data-role="SFX Artist" 
-             data-desc="Designing the sounds of the beast. Expert in immersive audio landscapes and tactile feedback for game systems.">
+             data-role="Artista de SFX" 
+             data-desc="Diseñando los sonidos de la bestia. Experto en paisajes sonoros inmersivos y retroalimentación táctil para sistemas de juego."
+             data-i18n-role="team-cubo-role"
+             data-i18n-desc="team-cubo-desc">
           <div class="skill-dot"></div>
           <div>
             <strong>Cubo</strong>
-            <small>SFX Artist</small>
+            <small data-i18n="team-cubo-role">Artista de SFX</small>
             <img src="./media/team/cubo.png" alt="Cubo" style="display: none;" class="modal-source-img">
           </div>
         </div>
@@ -385,12 +399,14 @@
         <!-- Gustavo -->
         <div class="skill-item team-card" 
              data-name="Gustavo" 
-             data-role="Producer & Sound Designer" 
-             data-desc="The rhythmic heart of the studio. Orchestrating projects and composing original scores that define the Torox atmosphere.">
+             data-role="Productor y Diseñador de Sonido" 
+             data-desc="El corazón rítmico del estudio. Orquestando proyectos y componiendo bandas sonoras originales que definen la atmósfera de Torox."
+             data-i18n-role="team-gustavo-role"
+             data-i18n-desc="team-gustavo-desc">
           <div class="skill-dot"></div>
           <div>
             <strong>Gustavo</strong>
-            <small>Producer & Sound Designer</small>
+            <small data-i18n="team-gustavo-role">Productor y Diseñador de Sonido</small>
             <img src="./media/team/gustavo.png" alt="Gustavo" style="display: none;" class="modal-source-img">
           </div>
         </div>
@@ -398,17 +414,19 @@
         <!-- OKZER -->
         <div class="skill-item team-card" 
              data-name="OKZER" 
-             data-role="UI & Graphic Designer" 
-             data-desc="Visual architect of the interface. Designing seamless, futuristic UI/UX that prioritizes player intuition and style.">
+             data-role="Diseñador de UI y Gráfico" 
+             data-desc="Arquitecto visual de la interfaz. Diseñando UI/UX futurista y fluida que prioriza la intuición y el estilo del jugador."
+             data-i18n-role="team-okzer-role"
+             data-i18n-desc="team-okzer-desc">
           <div class="skill-dot"></div>
           <div>
             <strong>OKZER</strong>
-            <small>UI & Graphic Designer</small>
+            <small data-i18n="team-okzer-role">Diseñador de UI y Gráfico</small>
             <img src="./media/team/okzer.png" alt="OKZER" style="display: none;" class="modal-source-img">
           </div>
         </div>
       </div>
-      <a href="#contact" class="btn-primary reveal reveal-delay-4">Work with us</a>
+      <a href="#contact" class="btn-primary reveal reveal-delay-4" data-i18n="about-btn">Trabaja con nosotros</a>
     </div>
   </div>
 </section>
@@ -416,32 +434,32 @@
 <!-- PROCESS -->
 <section id="process">
   <div class="process-header">
-    <div class="section-label reveal" style="justify-content:center;">How We Hunt</div>
-    <h2 class="section-title reveal reveal-delay-1">THE PROCESS</h2>
-    <p class="reveal reveal-delay-2" style="color:var(--muted); max-width:500px; margin:0 auto; line-height:1.75; font-size:0.95rem;">
-      From your brief to a live experience. Structured, transparent, and built around your goals.
+    <div class="section-label reveal" style="justify-content:center;" data-i18n="process-label">Cómo Caza la Bestia</div>
+    <h2 class="section-title reveal reveal-delay-1" data-i18n="process-title">EL PROCESO</h2>
+    <p class="reveal reveal-delay-2" style="color:var(--muted); max-width:500px; margin:0 auto; line-height:1.75; font-size:0.95rem;" data-i18n="process-desc">
+      Desde tu brief hasta una experiencia en vivo. Estructurado, transparente y construido en torno a tus objetivos.
     </p>
   </div>
   <div class="process-steps">
     <div class="process-step reveal">
       <div class="step-num">01</div>
-      <div class="step-title">Discovery & Brief</div>
-      <div class="step-desc">We dig into your brand, audience, and goals. What does winning look like for this project? We define it together before a single line is written.</div>
+      <div class="step-title" data-i18n="step-1-title">Descubrimiento y Brief</div>
+      <div class="step-desc" data-i18n="step-1-desc">Investigamos tu marca, audiencia y objetivos. ¿Cómo se ve el éxito para este proyecto? Lo definimos juntos antes de escribir una sola línea.</div>
     </div>
     <div class="process-step reveal reveal-delay-1">
       <div class="step-num">02</div>
-      <div class="step-title">Design & Architecture</div>
-      <div class="step-desc">Game design documents, world layout concepts, system blueprints. Every decision is made intentionally before touching Roblox Studio.</div>
+      <div class="step-title" data-i18n="step-2-title">Diseño y Arquitectura</div>
+      <div class="step-desc" data-i18n="step-2-desc">Documentos de diseño del juego, conceptos de diseño de mundos, planos de sistemas. Cada decisión se toma intencionalmente antes de tocar Roblox Studio.</div>
     </div>
     <div class="process-step reveal reveal-delay-2">
       <div class="step-num">03</div>
-      <div class="step-title">Build & Iterate</div>
-      <div class="step-desc">Rapid prototyping, weekly builds, continuous feedback loops. You're always in the loop — no six-week blackouts, no surprise deliverables.</div>
+      <div class="step-title" data-i18n="step-3-title">Construcción e Iteración</div>
+      <div class="step-desc" data-i18n="step-3-desc">Prototipado rápido, avances semanales, ciclos de retroalimentación continua. Siempre estarás informado: sin periodos de silencio ni sorpresas en las entregas.</div>
     </div>
     <div class="process-step reveal reveal-delay-3">
       <div class="step-num">04</div>
-      <div class="step-title">Launch & Support</div>
-      <div class="step-desc">QA, performance optimization, and a polished launch. Plus ongoing support and live ops if you want to keep the beast fed.</div>
+      <div class="step-title" data-i18n="step-4-title">Lanzamiento y Soporte</div>
+      <div class="step-desc" data-i18n="step-4-desc">QA, optimización de rendimiento y un lanzamiento pulido. Además de soporte continuo y Live Ops si deseas mantener a la bestia alimentada.</div>
     </div>
   </div>
 </section>
@@ -449,14 +467,14 @@
 <!-- CTA / CONTACT -->
 <section id="contact">
   <img src="./media/torox-logo-no-tratado.png" alt="Torox Seal" class="cta-seal">
-  <div class="cta-eyebrow">Ready to build?</div>
-  <h2 class="cta-title">LET'S<br>BIRTH A<br><span class="acc">BEAST</span></h2>
-  <p class="cta-sub">
-    Tell us about your project — a brand activation, a game concept, or just an idea you can't shake. We'll turn it into something players remember.
+  <div class="cta-eyebrow" data-i18n="contact-eyebrow">¿Listo para construir?</div>
+  <h2 class="cta-title" data-i18n="contact-title">DÉMOSLE<br>VIDA A UNA<br><span class="acc">BESTIA</span></h2>
+  <p class="cta-sub" data-i18n="contact-desc">
+    Cuéntanos sobre tu proyecto: una activación de marca, un concepto de juego o simplemente una idea que no puedes dejar pasar. La convertiremos en algo que los jugadores recordarán.
   </p>
   <div class="cta-actions">
-    <a href="mailto:hello@toroxstudio.com" class="btn-primary">Send a brief</a>
-    <a href="#" class="btn-ghost">View Portfolio</a>
+    <a href="mailto:hello@toroxstudio.com" class="btn-primary" data-i18n="contact-btn-send">Enviar un brief</a>
+    <a href="#" class="btn-ghost" data-i18n="contact-btn-portfolio">Ver Portafolio</a>
   </div>
   <a href="mailto:hello@toroxstudio.com" class="cta-email">
     <span>→</span> hello@toroxstudio.com
@@ -466,18 +484,18 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">TOROX<span>.</span>STUDIO</div>
-  <div class="footer-copy">© 2025 Torox Studio — Building Virtual Beasts</div>
+  <div class="footer-copy" data-i18n="footer-copy">© 2025 Torox Studio — Construyendo Bestias Virtuales</div>
   <ul class="footer-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services" data-i18n="footer-link-services">Servicios</a></li>
+    <li><a href="#work" data-i18n="footer-link-work">Portafolio</a></li>
+    <li><a href="#contact" data-i18n="footer-link-contact">Contacto</a></li>
   </ul>
 </footer>
 
 <!-- TEAM MODAL -->
 <div id="team-modal" class="modal-overlay">
   <div class="modal-container">
-    <button class="modal-close">&times;</button>
+    <button class="modal-close" data-i18n="modal-close">&times;</button>
     <div class="modal-content">
       <div class="modal-left">
         <div class="modal-img-frame">
@@ -491,7 +509,7 @@
         </div>
         <p id="modal-desc" class="modal-desc">Description goes here.</p>
         <div id="modal-footer" class="modal-footer">
-          <a id="modal-link" href="#" class="btn-primary" target="_blank">View Portfolio ↗</a>
+          <a id="modal-link" href="#" class="btn-primary" target="_blank" data-i18n="modal-btn">Ver Portafolio ↗</a>
         </div>
       </div>
     </div>
