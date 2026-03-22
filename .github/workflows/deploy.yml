@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           port: 22
-          script: rm -rf /public_html/*
+          script: cd public_html && rm -rf *
 
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
@@ -41,4 +41,4 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           port: 22
           source: "dist/*"
-          target: "/public_html/"
+          target: "public_html/"
