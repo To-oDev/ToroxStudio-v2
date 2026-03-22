@@ -12,13 +12,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install deps
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install
         run: npm install
 
       - name: Build
         run: npm run build
 
-      - name: Deploy via SFTP
+      - name: Clean remote directory
+        uses: appleboy/ssh-action@v1
+        with:
+          host: access-5020056254.webspace-host.com
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          port: 22
+          script: rm -rf /public_html/*
+
+      - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
           host: access-5020056254.webspace-host.com
