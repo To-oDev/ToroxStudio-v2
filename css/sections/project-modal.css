@@ -1,0 +1,135 @@
+/* ── PROJECT MODAL (REFINED OVERLAY DESIGN) ──────────────────────────────── */
+.project-modal-container {
+  max-width: 1100px;
+  width: 95%;
+  aspect-ratio: 16/9; /* Force a more cinematic shape if possible */
+  border: 1px solid var(--border);
+  background: var(--deep);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.9);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .project-modal-container {
+    aspect-ratio: auto;
+    min-height: 80vh;
+  }
+}
+
+.modal-content.horizontal {
+  display: block; /* No longer side-by-side */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.project-modal-visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #000;
+}
+
+.project-video-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.project-video-container video,
+.project-video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Guaranteed fill */
+  display: block;
+}
+
+/* Description Overlay */
+.project-modal-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 6rem 3rem 3rem;
+  background: linear-gradient(to top, 
+    rgba(0,0,0,0.95) 0%, 
+    rgba(0,0,0,0.7) 40%, 
+    rgba(0,0,0,0.4) 70%,
+    transparent 100%);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Glassmorphism frame as requested - clearly visible */
+.project-modal-details::before {
+  content: '';
+  position: absolute;
+  bottom: 2rem; left: 2rem; right: 2rem; top: 5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  z-index: -1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.project-modal-details > * {
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
+
+#project-modal-cat {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+#project-modal-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 767px) {
+  #project-modal-name { font-size: 2.5rem; }
+  .project-modal-details { padding: 3rem 1.5rem 1.5rem; }
+}
+
+#project-modal-desc {
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Hover effect for controls logic handled in JS, 
+   but we can dim the overlay if needed when hovering controls section */
+.project-modal-container:hover .project-modal-details {
+  opacity: 0.6; /* Slight dim to focus on video controls */
+}
+
+/* Floating animation */
+.modal-overlay.active .project-modal-container {
+  animation: modalFloatIn 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalFloatIn {
+  0% { opacity: 0; transform: translate(-50%, -40%) scale(0.92); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}

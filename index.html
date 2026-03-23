@@ -282,7 +282,10 @@
 
     <div class="work-grid reveal">
       <!-- Project 1: ToroxCity -->
-      <a href="#" class="project-card featured">
+      <a href="#" class="project-card featured" 
+         data-name="TOROXCITY" 
+         data-cat="Ciudad Prototipo · 2024" 
+         data-desc="Una ciudad prototipo construida por Industrias Torox, donde los jugadores viven, juegan e interactúan con sistemas emergentes desplegados en la red urbana.">
         <div class="project-visual">
           <img src="./media/media/torox-city.png" alt="ToroxCity">
         </div>
@@ -296,7 +299,10 @@
       </a>
 
       <!-- Project 2: Drifting Driver (Video) -->
-      <div class="project-card">
+      <div class="project-card" 
+           data-name="DRIFTING DRIVER" 
+           data-cat="Carreras · 2024" 
+           data-desc="Carreras de drifting con física semi-realista donde dominar el derrape lo es todo.">
         <div class="project-visual">
           <video src="./media/media/drifting-proto.mp4" autoplay muted loop playsinline></video>
         </div>
@@ -310,7 +316,10 @@
       </div>
 
       <!-- Project 3: AdverWorlds -->
-      <div class="project-card">
+      <div class="project-card" 
+           data-name="ADVERWORLDS" 
+           data-cat="Experiencia de Marca · 2024" 
+           data-desc="Juegos de marca que desarrollamos para clientes importantes, diseñados para cautivar, no para interrumpir.">
         <div class="project-visual">
           <video src="./media/media/carls-vestidor.mp4" autoplay muted loop playsinline></video>
         </div>
@@ -324,7 +333,10 @@
       </div>
 
       <!-- Project 4: GirlBoss (Sistemas Escalables) -->
-      <div class="project-card featured">
+      <div class="project-card featured" 
+           data-name="SISTEMAS ESCALABLES" 
+           data-cat="Ingeniería Luau · 2024" 
+           data-desc="Arquitectura de sistemas complejos diseñada para soportar miles de jugadores concurrentes sin sacrificar estabilidad.">
         <div class="project-visual">
           <video src="./media/media/GirlBoss GameplayPoli.mp4" controls playsinline></video>
         </div>
@@ -577,6 +589,30 @@
           <p id="modal-desc" class="modal-desc">Description goes here.</p>
           <div id="modal-footer" class="modal-footer">
             <a id="modal-link" href="#" class="btn-primary" target="_blank" data-i18n="modal-btn">Ver Portafolio ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-overlay">
+    <div class="modal-container project-modal-container">
+      <button class="modal-close" data-i18n="modal-close">&times;</button>
+      <div class="modal-content horizontal">
+        <div class="modal-left project-modal-visual">
+          <div class="project-video-container">
+            <!-- Content will be injected here -->
+          </div>
+        </div>
+        <div class="modal-right project-modal-details">
+          <div class="modal-header">
+            <div id="project-modal-cat" class="project-cat">Category</div>
+            <h3 id="project-modal-name">Project Name</h3>
+          </div>
+          <p id="project-modal-desc" class="modal-desc">Description goes here.</p>
+          <div class="modal-footer">
+            <a href="#contact" class="btn-primary" data-i18n="modal-btn-contact">Iniciar Proyecto Similar</a>
           </div>
         </div>
       </div>
