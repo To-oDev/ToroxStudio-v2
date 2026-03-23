@@ -72,6 +72,9 @@ export const translations = {
         "project-3-cat": "Experiencia de Marca · 2024",
         "project-3-name": "ADVERWORLDS",
         "project-3-desc": "Juegos de marca que desarrollamos para clientes importantes, diseñados para cautivar, no para interrumpir.",
+        "project-4-cat": "Ingeniería Luau · 2024",
+        "project-4-name": "SISTEMAS ESCALABLES",
+        "project-4-desc": "Arquitectura de sistemas complejos diseñada para soportar miles de jugadores concurrentes sin sacrificar estabilidad.",
         
         // About
         "about-badge-title": "7 ESPECIALISTAS",
@@ -200,6 +203,9 @@ export const translations = {
         "project-3-cat": "Branded Experience · 2024",
         "project-3-name": "ADVERWORLDS",
         "project-3-desc": "Branded games we developed for major clients — made to engage, not interrupt.",
+        "project-4-cat": "Luau Engineering · 2024",
+        "project-4-name": "SCALABLE SYSTEMS",
+        "project-4-desc": "Complex systems architecture designed to support thousands of concurrent players without sacrificing stability.",
         
         // About
         "about-badge-title": "7 SPECIALISTS",
