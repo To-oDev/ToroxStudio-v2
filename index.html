@@ -1,356 +1,393 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Torox Studio — Building Virtual Beasts</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torox Studio — Building Virtual Beasts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
-<!-- CURSOR -->
-<div id="cursor">
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-</div>
-
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#" class="nav-logo">
-    <img src="./media/torox-logo-no-tratado.png" alt="Torox Logo">
-    TOROX<span>.</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#services" data-i18n="nav-services">Servicios</a></li>
-    <li><a href="#work" data-i18n="nav-work">Portafolio</a></li>
-    <li><a href="#about" data-i18n="nav-about">Nosotros</a></li>
-    <li><a href="#process" data-i18n="nav-process">Proceso</a></li>
-    <li><a href="#contact" class="nav-cta" data-i18n="nav-cta">Iniciar Proyecto</a></li>
-  </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn active" data-lang="es">ES</button>
-    <button class="lang-btn" data-lang="en">EN</button>
-  </div>
-  <div id="burger-menu" class="burger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
+  <!-- CURSOR -->
+  <div id="cursor">
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
   </div>
 
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-
-  <div class="hero-left">
-    <div class="hero-eyebrow" data-i18n="hero-eyebrow">Roblox Game Studio</div>
-    <h1 class="hero-title">
-      TOROX
-      <span class="accent" data-i18n="hero-title-accent">STUDIO</span>
-    </h1>
-    <p class="hero-sub" data-i18n="hero-sub">CONSTRUYENDO BESTIAS VIRTUALES</p>
-    <p class="hero-desc" data-i18n="hero-desc">
-      Creamos experiencias inmersivas y atractivas en Roblox. Desde el concepto hasta el lanzamiento: ingeniería para escalar, construida para cautivar.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary" data-i18n="hero-btn-start">Iniciar Proyecto</a>
-      <a href="#work" class="btn-ghost" data-i18n="hero-btn-explore">Explorar Portafolio</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="beast-container">
-      <!-- Rings -->
-      <div class="beast-ring ring-1"></div>
-      <div class="beast-ring ring-2"></div>
-      <div class="beast-ring ring-3"></div>
-
-      <!-- Orbiting dots -->
-      <div class="orbit-dot orbit-1" style="--r:190px"></div>
-      <div class="orbit-dot orbit-2" style="--r:150px"></div>
-      <div class="orbit-dot orbit-3" style="--r:100px; width:4px; height:4px;"></div>
-
-      <!-- Core -->
-      <div class="beast-core">
-        <div class="beast-hex">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-            <defs>
-              <filter id="wire-glow">
-                <feGaussianBlur stdDeviation="0.6" result="blur"/>
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-            <polygon points="50,5 93,27.5 93,72.5 50,95 7,72.5 7,27.5" fill="#0e0820" stroke="#b44fff" stroke-width="1.5"/>
-            <polygon points="50,18 82,34.5 82,65.5 50,82 18,65.5 18,34.5" fill="#08051a" stroke="rgba(180,79,255,0.45)" stroke-width="1"/>
-            
-            <!-- Wireframe Bull (Exact Brand Trace - Scaled 2.2x) -->
-            <g transform="translate(50, 50) scale(2.2) translate(-50, -50)">
-              <path class="wire" d="M50 35 L42 30 L35 38 L25 35 L5 10 L15 35 L32 46 L20 50 L28 55 L35 65 L44 88 L42 95 L50 98 L58 95 L56 88 L65 65 L72 55 L80 50 L68 46 L85 35 L95 10 L75 35 L65 38 L58 30 Z" style="filter: url(#wire-glow);" />
-              <path class="wire" d="M35 38 L42 48 L50 35 L58 48 L65 38 M42 48 L58 48 M42 48 L50 65 L58 48 M32 46 L42 48 M68 46 L58 48 M42 48 L35 65 M58 48 L65 65 M44 88 L50 65 L56 88 M50 98 L50 65" />
-              <path class="wire" d="M5 10 L32 46 M95 10 L68 46 M15 35 L32 46 M85 35 L68 46" />
-              <path class="wire" d="M20 50 L35 65 M80 50 L65 65" />
-              
-              <circle class="dot" cx="50" cy="35" r="0.7" />
-              <circle class="dot" cx="42" cy="30" r="0.7" />
-              <circle class="dot" cx="35" cy="38" r="0.7" />
-              <circle class="dot" cx="25" cy="35" r="0.7" />
-              <circle class="dot" cx="5" cy="10" r="0.7" />
-              <circle class="dot" cx="15" cy="35" r="0.7" />
-              <circle class="dot" cx="32" cy="46" r="0.7" />
-              <circle class="dot" cx="20" cy="50" r="0.7" />
-              <circle class="dot" cx="28" cy="55" r="0.7" />
-              <circle class="dot" cx="35" cy="65" r="0.7" />
-              <circle class="dot" cx="44" cy="88" r="0.7" />
-              <circle class="dot" cx="50" cy="98" r="0.7" />
-              <circle class="dot" cx="56" cy="88" r="0.7" />
-              <circle class="dot" cx="65" cy="65" r="0.7" />
-              <circle class="dot" cx="72" cy="55" r="0.7" />
-              <circle class="dot" cx="80" cy="50" r="0.7" />
-              <circle class="dot" cx="68" cy="46" r="0.7" />
-              <circle class="dot" cx="85" cy="35" r="0.7" />
-              <circle class="dot" cx="95" cy="10" r="0.7" />
-              <circle class="dot" cx="75" cy="35" r="0.7" />
-              <circle class="dot" cx="65" cy="38" r="0.7" />
-              <circle class="dot" cx="58" cy="30" r="0.7" />
-              <circle class="dot" cx="42" cy="48" r="0.7" />
-              <circle class="dot" cx="58" cy="48" r="0.7" />
-              <circle class="dot" cx="50" cy="65" r="0.7" />
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-num">12<span>+</span></div>
-      <div class="stat-label" data-i18n="stat-projects-label">Proyectos Lanzados</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">5<span>M+</span></div>
-      <div class="stat-label" data-i18n="stat-sessions-label">Sesiones de Jugadores</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">3<span>+</span></div>
-      <div class="stat-label" data-i18n="stat-years-label">Años en Roblox</div>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee-section">
-  <div class="marquee-track">
-    <!-- doubled for seamless loop -->
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-1">Desarrollo de Juegos Roblox</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-2">Activaciones de Marca</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-3">Ingeniería Luau</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-4">Diseño de Mundos 3D</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-5">Arquitectura de Sistemas de Juego</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-6">UI / UX para Juegos</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-7">Estrategia de Monetización</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-1">Desarrollo de Juegos Roblox</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-2">Activaciones de Marca</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-3">Ingeniería Luau</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-4">Diseño de Mundos 3D</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-5">Arquitectura de Sistemas de Juego</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-6">UI / UX para Juegos</span></div>
-    <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-7">Estrategia de Monetización</span></div>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="services-layout">
-    <div class="services-intro">
-      <div class="section-label reveal" data-i18n="services-label">Nuestras Armas</div>
-      <h2 class="section-title reveal reveal-delay-1" data-i18n="services-title">QUÉ<br>CONSTRUIMOS</h2>
-      <p class="reveal reveal-delay-2" data-i18n="services-desc">Desde experiencias de marca hasta mundos de juego completos. Diseñamos productos de Roblox que no solo existen, sino que dominan.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-num">01</div>
-        <div class="service-body">
-          <div class="service-name" data-i18n="service-1-name">Mundos de Experiencia de Marca</div>
-          <div class="service-desc" data-i18n="service-1-desc">Entornos inmersivos a gran escala para marcas que ingresan a Roblox. Traducimos su identidad en un mundo vivo y jugable que su audiencia no olvidará.</div>
-          <div class="service-tags">
-            <span class="tag" data-i18n="service-1-tag-1">Diseño de Mundos</span>
-            <span class="tag" data-i18n="service-1-tag-2">Identidad de Marca</span>
-            <span class="tag" data-i18n="service-1-tag-3">Sistemas de Engagement</span>
-          </div>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-num">02</div>
-        <div class="service-body">
-          <div class="service-name" data-i18n="service-2-name">Ingeniería de Sistemas de Juego</div>
-          <div class="service-desc" data-i18n="service-2-desc">Arquitectura profunda en Luau: combate, progresión, economías, sistemas de avatares. Código limpio y escalable para millones de jugadores concurrentes.</div>
-          <div class="service-tags">
-            <span class="tag" data-i18n="service-2-tag-1">Luau</span>
-            <span class="tag" data-i18n="service-2-tag-2">Diseño de Sistemas</span>
-            <span class="tag" data-i18n="service-2-tag-3">Rendimiento</span>
-          </div>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-num">03</div>
-        <div class="service-body">
-          <div class="service-name" data-i18n="service-3-name">Diseño UI / UX de Juego</div>
-          <div class="service-desc" data-i18n="service-3-desc">Interfaces que se sienten nativas en el mundo del juego. Menús, HUDs, sistemas de inventario y flujos de incorporación diseñados para la máxima retención de jugadores.</div>
-          <div class="service-tags">
-            <span class="tag" data-i18n="service-3-tag-1">Diseño UI</span>
-            <span class="tag" data-i18n="service-3-tag-2">Retención de Jugadores</span>
-            <span class="tag" data-i18n="service-3-tag-3">Roblox GUI</span>
-          </div>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-num">04</div>
-        <div class="service-body">
-          <div class="service-name" data-i18n="service-4-name">Producción de Entornos y Activos 3D</div>
-          <div class="service-desc" data-i18n="service-4-desc">Entornos 3D hechos a mano, props y activos de personajes construidos para Roblox Studio. Optimizados para el rendimiento sin sacrificar la calidad visual.</div>
-          <div class="service-tags">
-            <span class="tag" data-i18n="service-4-tag-1">Modelado 3D</span>
-            <span class="tag" data-i18n="service-4-tag-2">Roblox Studio</span>
-            <span class="tag" data-i18n="service-4-tag-3">Optimización</span>
-          </div>
-        </div>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-num">05</div>
-        <div class="service-body">
-          <div class="service-name" data-i18n="service-5-name">Monetization y Live Ops</div>
-          <div class="service-desc" data-i18n="service-5-desc">Battle passes, estrategias de gamepasses, eventos estacionales y economías virtuales diseñadas para maximizar ingresos sin afectar la experiencia del jugador.</div>
-          <div class="service-tags">
-            <span class="tag" data-i18n="service-5-tag-1">Economía Robux</span>
-            <span class="tag" data-i18n="service-5-tag-2">Eventos en Vivo</span>
-            <span class="tag" data-i18n="service-5-tag-3">Retención</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK -->
-<section id="work">
-  <div class="work-header">
-    <div>
-      <div class="section-label reveal" data-i18n="work-label">Trabajos Seleccionados</div>
-      <h2 class="section-title reveal reveal-delay-1" data-i18n="work-title">LAS<br>BESTIAS<br>QUE CREAMOS</h2>
-    </div>
-    <a href="#contact" class="btn-ghost reveal reveal-delay-2" data-i18n="work-view-all">Ver todos los proyectos ↗</a>
-  </div>
-
-  <div class="work-grid reveal">
-    <!-- Project 1: ToroxCity -->
-    <a href="#" class="project-card featured">
-      <div class="project-visual">
-        <img src="./media/media/torox-city.png" alt="ToroxCity">
-      </div>
-      <div class="project-arrow">↗</div>
-      <div class="project-info">
-        <div class="project-cat" data-i18n="project-1-cat">Ciudad Prototipo · 2024</div>
-        <div class="project-name" data-i18n="project-1-name">TOROXCITY</div>
-        <div class="project-desc" data-i18n="project-1-desc">Una ciudad prototipo construida por Industrias Torox, donde los jugadores viven, juegan e interactúan con sistemas emergentes desplegados en la red urbana.</div>
-      </div>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="./media/torox-logo-no-tratado.png" alt="Torox Logo">
+      TOROX<span>.</span>
     </a>
+    <ul class="nav-links">
+      <li><a href="#services" data-i18n="nav-services">Servicios</a></li>
+      <li><a href="#work" data-i18n="nav-work">Portafolio</a></li>
+      <li><a href="#about" data-i18n="nav-about">Nosotros</a></li>
+      <li><a href="#process" data-i18n="nav-process">Proceso</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav-cta">Iniciar Proyecto</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div id="burger-menu" class="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-    <!-- Project 2: Drifting Driver (Video) -->
-    <div class="project-card">
-      <div class="project-visual">
-        <video src="./media/media/drifting-proto.mp4" autoplay muted loop playsinline></video>
-      </div>
-      <div class="project-arrow">↗</div>
-      <div class="project-info">
-        <div class="project-cat" data-i18n="project-2-cat">Carreras · 2024</div>
-        <div class="project-name" data-i18n="project-2-name">DRIFTING DRIVER</div>
-        <div class="project-desc" data-i18n="project-2-desc">Carreras de drifting con física semi-realista donde dominar el derrape lo es todo.</div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-left">
+      <div class="hero-eyebrow" data-i18n="hero-eyebrow">Roblox Game Studio</div>
+      <h1 class="hero-title">
+        TOROX
+        <span class="accent" data-i18n="hero-title-accent">STUDIO</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero-sub">CONSTRUYENDO BESTIAS VIRTUALES</p>
+      <p class="hero-desc" data-i18n="hero-desc">
+        Creamos experiencias inmersivas y atractivas en Roblox. Desde el concepto hasta el lanzamiento: ingeniería para
+        escalar, construida para cautivar.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary" data-i18n="hero-btn-start">Iniciar Proyecto</a>
+        <a href="#work" class="btn-ghost" data-i18n="hero-btn-explore">Explorar Portafolio</a>
       </div>
     </div>
 
-    <!-- Project 3: AdverWorlds -->
-    <div class="project-card">
-      <div class="project-visual">
-        <video src="./media/media/carls-vestidor.mp4" autoplay muted loop playsinline></video>
-      </div>
-      <div class="project-arrow">↗</div>
-      <div class="project-info">
-        <div class="project-cat" data-i18n="project-3-cat">Experiencia de Marca · 2024</div>
-        <div class="project-name" data-i18n="project-3-name">ADVERWORLDS</div>
-        <div class="project-desc" data-i18n="project-3-desc">Juegos de marca que desarrollamos para clientes importantes, diseñados para cautivar, no para interrumpir.</div>
+    <div class="hero-right">
+      <div class="beast-container">
+        <!-- Rings -->
+        <div class="beast-ring ring-1"></div>
+        <div class="beast-ring ring-2"></div>
+        <div class="beast-ring ring-3"></div>
+
+        <!-- Orbiting dots -->
+        <div class="orbit-dot orbit-1" style="--r:190px"></div>
+        <div class="orbit-dot orbit-2" style="--r:150px"></div>
+        <div class="orbit-dot orbit-3" style="--r:100px; width:4px; height:4px;"></div>
+
+        <!-- Core -->
+        <div class="beast-core">
+          <div class="beast-hex">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+              <defs>
+                <filter id="wire-glow">
+                  <feGaussianBlur stdDeviation="0.6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <polygon points="50,5 93,27.5 93,72.5 50,95 7,72.5 7,27.5" fill="#0e0820" stroke="#b44fff"
+                stroke-width="1.5" />
+              <polygon points="50,18 82,34.5 82,65.5 50,82 18,65.5 18,34.5" fill="#08051a"
+                stroke="rgba(180,79,255,0.45)" stroke-width="1" />
+
+              <!-- Wireframe Bull (Exact Brand Trace - Scaled 2.2x) -->
+              <g transform="translate(50, 50) scale(2.2) translate(-50, -50)">
+                <path class="wire"
+                  d="M50 35 L42 30 L35 38 L25 35 L5 10 L15 35 L32 46 L20 50 L28 55 L35 65 L44 88 L42 95 L50 98 L58 95 L56 88 L65 65 L72 55 L80 50 L68 46 L85 35 L95 10 L75 35 L65 38 L58 30 Z"
+                  style="filter: url(#wire-glow);" />
+                <path class="wire"
+                  d="M35 38 L42 48 L50 35 L58 48 L65 38 M42 48 L58 48 M42 48 L50 65 L58 48 M32 46 L42 48 M68 46 L58 48 M42 48 L35 65 M58 48 L65 65 M44 88 L50 65 L56 88 M50 98 L50 65" />
+                <path class="wire" d="M5 10 L32 46 M95 10 L68 46 M15 35 L32 46 M85 35 L68 46" />
+                <path class="wire" d="M20 50 L35 65 M80 50 L65 65" />
+
+                <circle class="dot" cx="50" cy="35" r="0.7" />
+                <circle class="dot" cx="42" cy="30" r="0.7" />
+                <circle class="dot" cx="35" cy="38" r="0.7" />
+                <circle class="dot" cx="25" cy="35" r="0.7" />
+                <circle class="dot" cx="5" cy="10" r="0.7" />
+                <circle class="dot" cx="15" cy="35" r="0.7" />
+                <circle class="dot" cx="32" cy="46" r="0.7" />
+                <circle class="dot" cx="20" cy="50" r="0.7" />
+                <circle class="dot" cx="28" cy="55" r="0.7" />
+                <circle class="dot" cx="35" cy="65" r="0.7" />
+                <circle class="dot" cx="44" cy="88" r="0.7" />
+                <circle class="dot" cx="50" cy="98" r="0.7" />
+                <circle class="dot" cx="56" cy="88" r="0.7" />
+                <circle class="dot" cx="65" cy="65" r="0.7" />
+                <circle class="dot" cx="72" cy="55" r="0.7" />
+                <circle class="dot" cx="80" cy="50" r="0.7" />
+                <circle class="dot" cx="68" cy="46" r="0.7" />
+                <circle class="dot" cx="85" cy="35" r="0.7" />
+                <circle class="dot" cx="95" cy="10" r="0.7" />
+                <circle class="dot" cx="75" cy="35" r="0.7" />
+                <circle class="dot" cx="65" cy="38" r="0.7" />
+                <circle class="dot" cx="58" cy="30" r="0.7" />
+                <circle class="dot" cx="42" cy="48" r="0.7" />
+                <circle class="dot" cx="58" cy="48" r="0.7" />
+                <circle class="dot" cx="50" cy="65" r="0.7" />
+              </g>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Project 4: GirlBoss (Sistemas Escalables) -->
-    <div class="project-card featured">
-      <div class="project-visual">
-        <video src="./media/media/GirlBoss GameplayPoli.mp4" controls playsinline></video>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">12<span>+</span></div>
+        <div class="stat-label" data-i18n="stat-projects-label">Proyectos Lanzados</div>
       </div>
-      <div class="project-arrow">↗</div>
-      <div class="project-info">
-        <div class="project-cat" data-i18n="project-4-cat">Ingeniería Luau · 2024</div>
-        <div class="project-name" data-i18n="project-4-name">SISTEMAS ESCALABLES</div>
-        <div class="project-desc" data-i18n="project-4-desc">Arquitectura de sistemas complejos diseñada para soportar miles de jugadores concurrentes sin sacrificar estabilidad.</div>
+      <div class="stat-item">
+        <div class="stat-num">5<span>M+</span></div>
+        <div class="stat-label" data-i18n="stat-sessions-label">Sesiones de Jugadores</div>
       </div>
+      <div class="stat-item">
+        <div class="stat-num">3<span>+</span></div>
+        <div class="stat-label" data-i18n="stat-years-label">Años en Roblox</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <!-- doubled for seamless loop -->
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-1">Desarrollo de Juegos
+          Roblox</span></div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-2">Activaciones de Marca</span>
+      </div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-3">Ingeniería Luau</span></div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-4">Diseño de Mundos 3D</span>
+      </div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-5">Arquitectura de Sistemas de
+          Juego</span></div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-6">UI / UX para Juegos</span>
+      </div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-7">Estrategia de
+          Monetización</span></div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-1">Desarrollo de Juegos
+          Roblox</span></div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-2">Activaciones de Marca</span>
+      </div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-3">Ingeniería Luau</span></div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-4">Diseño de Mundos 3D</span>
+      </div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-5">Arquitectura de Sistemas de
+          Juego</span></div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-6">UI / UX para Juegos</span>
+      </div>
+      <div class="marquee-item"><span class="dot"></span> <span data-i18n="marquee-item-7">Estrategia de
+          Monetización</span></div>
     </div>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-layout">
-    <div class="about-visual reveal">
-      <div class="about-frame">
-        <div class="about-frame-bg"></div>
-        <div class="about-corner tl"></div>
-        <div class="about-corner tr"></div>
-        <div class="about-corner bl"></div>
-        <div class="about-corner br"></div>
-        <div class="about-placeholder">
-          <div class="about-avatar-ring">
-            <div class="about-avatar-inner">TX</div>
-          </div>
-          <img src="./media/torox-logo-no-tratado.png" alt="Torox Industries" style="width: 200px; opacity: 0.15; position: absolute; bottom: -20px;">
-        </div>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-layout">
+      <div class="services-intro">
+        <div class="section-label reveal" data-i18n="services-label">Nuestras Armas</div>
+        <h2 class="section-title reveal reveal-delay-1" data-i18n="services-title">QUÉ<br>CONSTRUIMOS</h2>
+        <p class="reveal reveal-delay-2" data-i18n="services-desc">Desde experiencias de marca hasta mundos de juego
+          completos. Diseñamos productos de Roblox que no solo existen, sino que dominan.</p>
       </div>
-      <div class="about-badge">
-        <div class="about-badge-title" data-i18n="about-badge-title">7 ESPECIALISTAS</div>
-        <div class="about-badge-sub" data-i18n="about-badge-sub">Listos para el Despliegue</div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-num">01</div>
+          <div class="service-body">
+            <div class="service-name" data-i18n="service-1-name">Mundos de Experiencia de Marca</div>
+            <div class="service-desc" data-i18n="service-1-desc">Entornos inmersivos a gran escala para marcas que
+              ingresan a Roblox. Traducimos su identidad en un mundo vivo y jugable que su audiencia no olvidará.</div>
+            <div class="service-tags">
+              <span class="tag" data-i18n="service-1-tag-1">Diseño de Mundos</span>
+              <span class="tag" data-i18n="service-1-tag-2">Identidad de Marca</span>
+              <span class="tag" data-i18n="service-1-tag-3">Sistemas de Engagement</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-num">02</div>
+          <div class="service-body">
+            <div class="service-name" data-i18n="service-2-name">Ingeniería de Sistemas de Juego</div>
+            <div class="service-desc" data-i18n="service-2-desc">Arquitectura profunda en Luau: combate, progresión,
+              economías, sistemas de avatares. Código limpio y escalable para millones de jugadores concurrentes.</div>
+            <div class="service-tags">
+              <span class="tag" data-i18n="service-2-tag-1">Luau</span>
+              <span class="tag" data-i18n="service-2-tag-2">Diseño de Sistemas</span>
+              <span class="tag" data-i18n="service-2-tag-3">Rendimiento</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-num">03</div>
+          <div class="service-body">
+            <div class="service-name" data-i18n="service-3-name">Diseño UI / UX de Juego</div>
+            <div class="service-desc" data-i18n="service-3-desc">Interfaces que se sienten nativas en el mundo del
+              juego. Menús, HUDs, sistemas de inventario y flujos de incorporación diseñados para la máxima retención de
+              jugadores.</div>
+            <div class="service-tags">
+              <span class="tag" data-i18n="service-3-tag-1">Diseño UI</span>
+              <span class="tag" data-i18n="service-3-tag-2">Retención de Jugadores</span>
+              <span class="tag" data-i18n="service-3-tag-3">Roblox GUI</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-num">04</div>
+          <div class="service-body">
+            <div class="service-name" data-i18n="service-4-name">Producción de Entornos y Activos 3D</div>
+            <div class="service-desc" data-i18n="service-4-desc">Entornos 3D hechos a mano, props y activos de
+              personajes construidos para Roblox Studio. Optimizados para el rendimiento sin sacrificar la calidad
+              visual.</div>
+            <div class="service-tags">
+              <span class="tag" data-i18n="service-4-tag-1">Modelado 3D</span>
+              <span class="tag" data-i18n="service-4-tag-2">Roblox Studio</span>
+              <span class="tag" data-i18n="service-4-tag-3">Optimización</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-num">05</div>
+          <div class="service-body">
+            <div class="service-name" data-i18n="service-5-name">Monetization y Live Ops</div>
+            <div class="service-desc" data-i18n="service-5-desc">Battle passes, estrategias de gamepasses, eventos
+              estacionales y economías virtuales diseñadas para maximizar ingresos sin afectar la experiencia del
+              jugador.</div>
+            <div class="service-tags">
+              <span class="tag" data-i18n="service-5-tag-1">Economía Robux</span>
+              <span class="tag" data-i18n="service-5-tag-2">Eventos en Vivo</span>
+              <span class="tag" data-i18n="service-5-tag-3">Retención</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="about-content">
-      <div class="section-label reveal" data-i18n="about-label">Las Bestias Detrás del Studio</div>
-      <h2 class="section-title reveal reveal-delay-1" data-i18n="about-title">EL SQUAD <span class="acc">CORE</span></h2>
-      <p class="reveal reveal-delay-2" data-i18n="about-desc">
-        Un colectivo diverso de especialistas ampliando los límites de lo posible en Roblox. Desde la arquitectura de sistemas hasta la producción musical, cuidamos cada detalle.
-      </p>
-      
-      <div class="skills-grid reveal reveal-delay-3">
-        <!-- To.o -->
-        <div class="skill-item team-card" 
-             data-name="To.o" 
-             data-role="Fundador y Arquitecto de Sistemas" 
-             data-desc="Arquitecto del Ecosistema Torox. Especializado en backends de alto rendimiento e integración de sistemas complejos. Liderando la visión de las bestias virtuales."
-             data-i18n-role="team-too-role"
-             data-i18n-desc="team-too-desc"
-             data-link="#">
-          <div class="skill-dot"></div>
-          <div>
-            <strong>To.o</strong>
-            <small data-i18n="team-too-role">Fundador y Arquitecto de Sistemas</small>
-            <!-- Hidden img for Vite to process correctly -->
-            <img src="./media/team/too.png" alt="To.o" style="display: none;" class="modal-source-img">
+  <!-- WORK -->
+  <section id="work">
+    <div class="work-header">
+      <div>
+        <div class="section-label reveal" data-i18n="work-label">Trabajos Seleccionados</div>
+        <h2 class="section-title reveal reveal-delay-1" data-i18n="work-title">LAS<br>BESTIAS<br>QUE CREAMOS</h2>
+      </div>
+      <a href="#contact" class="btn-ghost reveal reveal-delay-2" data-i18n="work-view-all">Ver todos los proyectos ↗</a>
+    </div>
+
+    <div class="work-grid reveal">
+      <!-- Project 1: ToroxCity -->
+      <a href="#" class="project-card featured">
+        <div class="project-visual">
+          <img src="./media/media/torox-city.png" alt="ToroxCity">
+        </div>
+        <div class="project-arrow">↗</div>
+        <div class="project-info">
+          <div class="project-cat" data-i18n="project-1-cat">Ciudad Prototipo · 2024</div>
+          <div class="project-name" data-i18n="project-1-name">TOROXCITY</div>
+          <div class="project-desc" data-i18n="project-1-desc">Una ciudad prototipo construida por Industrias Torox,
+            donde los jugadores viven, juegan e interactúan con sistemas emergentes desplegados en la red urbana.</div>
+        </div>
+      </a>
+
+      <!-- Project 2: Drifting Driver (Video) -->
+      <div class="project-card">
+        <div class="project-visual">
+          <video src="./media/media/drifting-proto.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="project-arrow">↗</div>
+        <div class="project-info">
+          <div class="project-cat" data-i18n="project-2-cat">Carreras · 2024</div>
+          <div class="project-name" data-i18n="project-2-name">DRIFTING DRIVER</div>
+          <div class="project-desc" data-i18n="project-2-desc">Carreras de drifting con física semi-realista donde
+            dominar el derrape lo es todo.</div>
+        </div>
+      </div>
+
+      <!-- Project 3: AdverWorlds -->
+      <div class="project-card">
+        <div class="project-visual">
+          <video src="./media/media/carls-vestidor.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="project-arrow">↗</div>
+        <div class="project-info">
+          <div class="project-cat" data-i18n="project-3-cat">Experiencia de Marca · 2024</div>
+          <div class="project-name" data-i18n="project-3-name">ADVERWORLDS</div>
+          <div class="project-desc" data-i18n="project-3-desc">Juegos de marca que desarrollamos para clientes
+            importantes, diseñados para cautivar, no para interrumpir.</div>
+        </div>
+      </div>
+
+      <!-- Project 4: GirlBoss (Sistemas Escalables) -->
+      <div class="project-card featured">
+        <div class="project-visual">
+          <video src="./media/media/GirlBoss GameplayPoli.mp4" controls playsinline></video>
+        </div>
+        <div class="project-arrow">↗</div>
+        <div class="project-info">
+          <div class="project-cat" data-i18n="project-4-cat">Ingeniería Luau · 2024</div>
+          <div class="project-name" data-i18n="project-4-name">SISTEMAS ESCALABLES</div>
+          <div class="project-desc" data-i18n="project-4-desc">Arquitectura de sistemas complejos diseñada para soportar
+            miles de jugadores concurrentes sin sacrificar estabilidad.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-layout">
+      <div class="about-visual reveal">
+        <div class="about-frame">
+          <div class="about-frame-bg"></div>
+          <div class="about-corner tl"></div>
+          <div class="about-corner tr"></div>
+          <div class="about-corner bl"></div>
+          <div class="about-corner br"></div>
+          <div class="about-placeholder">
+            <div class="about-avatar-ring">
+              <div class="about-avatar-inner">TX</div>
+            </div>
+            <img src="./media/torox-logo-no-tratado.png" alt="Torox Industries"
+              style="width: 200px; opacity: 0.15; position: absolute; bottom: -20px;">
           </div>
         </div>
+        <div class="about-badge">
+          <div class="about-badge-title" data-i18n="about-badge-title">7 ESPECIALISTAS</div>
+          <div class="about-badge-sub" data-i18n="about-badge-sub">Listos para el Despliegue</div>
+        </div>
+      </div>
 
-        <!-- Fabi -->
-        <!--
+      <div class="about-content">
+        <div class="section-label reveal" data-i18n="about-label">Las Bestias Detrás del Studio</div>
+        <h2 class="section-title reveal reveal-delay-1" data-i18n="about-title">EL SQUAD <span class="acc">CORE</span>
+        </h2>
+        <p class="reveal reveal-delay-2" data-i18n="about-desc">
+          Un colectivo diverso de especialistas ampliando los límites de lo posible en Roblox. Desde la arquitectura de
+          sistemas hasta la producción musical, cuidamos cada detalle.
+        </p>
+
+        <div class="skills-grid reveal reveal-delay-3">
+          <!-- To.o -->
+          <div class="skill-item team-card" data-name="To.o" data-role="Fundador y Arquitecto de Sistemas"
+            data-desc="Arquitecto del Ecosistema Torox. Especializado en backends de alto rendimiento e integración de sistemas complejos. Liderando la visión de las bestias virtuales."
+            data-i18n-role="team-too-role" data-i18n-desc="team-too-desc" data-link="#">
+            <div class="skill-dot"></div>
+            <div>
+              <strong>To.o</strong>
+              <small data-i18n="team-too-role">Fundador y Arquitecto de Sistemas</small>
+              <!-- Hidden img for Vite to process correctly -->
+              <img src="./media/team/too.png" alt="To.o" style="display: none;" class="modal-source-img">
+            </div>
+          </div>
+
+          <!-- Fabi -->
+          <!--
         <div class="skill-item team-card" 
              data-name="Fabi" 
              data-role="Diseñador de Juegos y Constructor" 
@@ -366,8 +403,8 @@
         </div>
         -->
 
-        <!-- Jona -->
-        <!--
+          <!-- Jona -->
+          <!--
         <div class="skill-item team-card" 
              data-name="Jona" 
              data-role="Scripter Principal y Constructor" 
@@ -383,8 +420,8 @@
         </div>
         -->
 
-        <!-- Turok -->
-        <!--
+          <!-- Turok -->
+          <!--
         <div class="skill-item team-card" 
              data-name="Turok" 
              data-role="Animador Senior" 
@@ -400,8 +437,8 @@
         </div>
         -->
 
-        <!-- Cubo -->
-        <!--
+          <!-- Cubo -->
+          <!--
         <div class="skill-item team-card" 
              data-name="Cubo" 
              data-role="Artista de SFX" 
@@ -416,7 +453,7 @@
           </div>
         </div>
 
-        <!-- Gustavo -->
+        <!-- Gustavo 
         <div class="skill-item team-card" 
              data-name="Gustavo" 
              data-role="Productor y Diseñador de Sonido" 
@@ -431,7 +468,7 @@
           </div>
         </div>
 
-        <!-- OKZER -->
+        
         <div class="skill-item team-card" 
              data-name="OKZER" 
              data-role="Diseñador de UI y Gráfico" 
@@ -445,97 +482,108 @@
             <img src="./media/team/okzer.png" alt="OKZER" style="display: none;" class="modal-source-img">
           </div>
         </div>
+        -->
+        </div>
+        <a href="#contact" class="btn-primary reveal reveal-delay-4" data-i18n="about-btn">Trabaja con nosotros</a>
       </div>
-      <a href="#contact" class="btn-primary reveal reveal-delay-4" data-i18n="about-btn">Trabaja con nosotros</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROCESS -->
-<section id="process">
-  <div class="process-header">
-    <div class="section-label reveal" style="justify-content:center;" data-i18n="process-label">Cómo Caza la Bestia</div>
-    <h2 class="section-title reveal reveal-delay-1" data-i18n="process-title">EL PROCESO</h2>
-    <p class="reveal reveal-delay-2" style="color:var(--muted); max-width:500px; margin:0 auto; line-height:1.75; font-size:0.95rem;" data-i18n="process-desc">
-      Desde tu brief hasta una experiencia en vivo. Estructurado, transparente y construido en torno a tus objetivos.
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="process-header">
+      <div class="section-label reveal" style="justify-content:center;" data-i18n="process-label">Cómo Caza la Bestia
+      </div>
+      <h2 class="section-title reveal reveal-delay-1" data-i18n="process-title">EL PROCESO</h2>
+      <p class="reveal reveal-delay-2"
+        style="color:var(--muted); max-width:500px; margin:0 auto; line-height:1.75; font-size:0.95rem;"
+        data-i18n="process-desc">
+        Desde tu brief hasta una experiencia en vivo. Estructurado, transparente y construido en torno a tus objetivos.
+      </p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-title" data-i18n="step-1-title">Descubrimiento y Brief</div>
+        <div class="step-desc" data-i18n="step-1-desc">Investigamos tu marca, audiencia y objetivos. ¿Cómo se ve el
+          éxito para este proyecto? Lo definimos juntos antes de escribir una sola línea.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <div class="step-title" data-i18n="step-2-title">Diseño y Arquitectura</div>
+        <div class="step-desc" data-i18n="step-2-desc">Documentos de diseño del juego, conceptos de diseño de mundos,
+          planos de sistemas. Cada decisión se toma intencionalmente antes de tocar Roblox Studio.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-num">03</div>
+        <div class="step-title" data-i18n="step-3-title">Construcción e Iteración</div>
+        <div class="step-desc" data-i18n="step-3-desc">Prototipado rápido, avances semanales, ciclos de
+          retroalimentación continua. Siempre estarás informado: sin periodos de silencio ni sorpresas en las entregas.
+        </div>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-num">04</div>
+        <div class="step-title" data-i18n="step-4-title">Lanzamiento y Soporte</div>
+        <div class="step-desc" data-i18n="step-4-desc">QA, optimización de rendimiento y un lanzamiento pulido. Además
+          de soporte continuo y Live Ops si deseas mantener a la bestia alimentada.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact">
+    <img src="./media/torox-logo-no-tratado.png" alt="Torox Seal" class="cta-seal">
+    <div class="cta-eyebrow" data-i18n="contact-eyebrow">¿Listo para construir?</div>
+    <h2 class="cta-title" data-i18n="contact-title">DÉMOSLE<br>VIDA A UNA<br><span class="acc">BESTIA</span></h2>
+    <p class="cta-sub" data-i18n="contact-desc">
+      Cuéntanos sobre tu proyecto: una activación de marca, un concepto de juego o simplemente una idea que no puedes
+      dejar pasar. La convertiremos en algo que los jugadores recordarán.
     </p>
-  </div>
-  <div class="process-steps">
-    <div class="process-step reveal">
-      <div class="step-num">01</div>
-      <div class="step-title" data-i18n="step-1-title">Descubrimiento y Brief</div>
-      <div class="step-desc" data-i18n="step-1-desc">Investigamos tu marca, audiencia y objetivos. ¿Cómo se ve el éxito para este proyecto? Lo definimos juntos antes de escribir una sola línea.</div>
+    <div class="cta-actions">
+      <a href="mailto:hello@toroxstudio.com" class="btn-primary" data-i18n="contact-btn-send">Enviar un brief</a>
+      <a href="#" class="btn-ghost" data-i18n="contact-btn-portfolio">Ver Portafolio</a>
     </div>
-    <div class="process-step reveal reveal-delay-1">
-      <div class="step-num">02</div>
-      <div class="step-title" data-i18n="step-2-title">Diseño y Arquitectura</div>
-      <div class="step-desc" data-i18n="step-2-desc">Documentos de diseño del juego, conceptos de diseño de mundos, planos de sistemas. Cada decisión se toma intencionalmente antes de tocar Roblox Studio.</div>
-    </div>
-    <div class="process-step reveal reveal-delay-2">
-      <div class="step-num">03</div>
-      <div class="step-title" data-i18n="step-3-title">Construcción e Iteración</div>
-      <div class="step-desc" data-i18n="step-3-desc">Prototipado rápido, avances semanales, ciclos de retroalimentación continua. Siempre estarás informado: sin periodos de silencio ni sorpresas en las entregas.</div>
-    </div>
-    <div class="process-step reveal reveal-delay-3">
-      <div class="step-num">04</div>
-      <div class="step-title" data-i18n="step-4-title">Lanzamiento y Soporte</div>
-      <div class="step-desc" data-i18n="step-4-desc">QA, optimización de rendimiento y un lanzamiento pulido. Además de soporte continuo y Live Ops si deseas mantener a la bestia alimentada.</div>
-    </div>
-  </div>
-</section>
+    <a href="mailto:hello@toroxstudio.com" class="cta-email">
+      <span>→</span> hello@toroxstudio.com
+    </a>
+  </section>
 
-<!-- CTA / CONTACT -->
-<section id="contact">
-  <img src="./media/torox-logo-no-tratado.png" alt="Torox Seal" class="cta-seal">
-  <div class="cta-eyebrow" data-i18n="contact-eyebrow">¿Listo para construir?</div>
-  <h2 class="cta-title" data-i18n="contact-title">DÉMOSLE<br>VIDA A UNA<br><span class="acc">BESTIA</span></h2>
-  <p class="cta-sub" data-i18n="contact-desc">
-    Cuéntanos sobre tu proyecto: una activación de marca, un concepto de juego o simplemente una idea que no puedes dejar pasar. La convertiremos en algo que los jugadores recordarán.
-  </p>
-  <div class="cta-actions">
-    <a href="mailto:hello@toroxstudio.com" class="btn-primary" data-i18n="contact-btn-send">Enviar un brief</a>
-    <a href="#" class="btn-ghost" data-i18n="contact-btn-portfolio">Ver Portafolio</a>
-  </div>
-  <a href="mailto:hello@toroxstudio.com" class="cta-email">
-    <span>→</span> hello@toroxstudio.com
-  </a>
-</section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">TOROX<span>.</span>STUDIO</div>
+    <div class="footer-copy" data-i18n="footer-copy">© 2025 Torox Studio — Construyendo Bestias Virtuales</div>
+    <ul class="footer-links">
+      <li><a href="#services" data-i18n="footer-link-services">Servicios</a></li>
+      <li><a href="#work" data-i18n="footer-link-work">Portafolio</a></li>
+      <li><a href="#contact" data-i18n="footer-link-contact">Contacto</a></li>
+    </ul>
+  </footer>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">TOROX<span>.</span>STUDIO</div>
-  <div class="footer-copy" data-i18n="footer-copy">© 2025 Torox Studio — Construyendo Bestias Virtuales</div>
-  <ul class="footer-links">
-    <li><a href="#services" data-i18n="footer-link-services">Servicios</a></li>
-    <li><a href="#work" data-i18n="footer-link-work">Portafolio</a></li>
-    <li><a href="#contact" data-i18n="footer-link-contact">Contacto</a></li>
-  </ul>
-</footer>
-
-<!-- TEAM MODAL -->
-<div id="team-modal" class="modal-overlay">
-  <div class="modal-container">
-    <button class="modal-close" data-i18n="modal-close">&times;</button>
-    <div class="modal-content">
-      <div class="modal-left">
-        <div class="modal-img-frame">
-          <img id="modal-img" src="" alt="Team Member">
+  <!-- TEAM MODAL -->
+  <div id="team-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" data-i18n="modal-close">&times;</button>
+      <div class="modal-content">
+        <div class="modal-left">
+          <div class="modal-img-frame">
+            <img id="modal-img" src="" alt="Team Member">
+          </div>
         </div>
-      </div>
-      <div class="modal-right">
-        <div class="modal-header">
-          <h3 id="modal-name">Member Name</h3>
-          <span id="modal-role" class="modal-role">Role</span>
-        </div>
-        <p id="modal-desc" class="modal-desc">Description goes here.</p>
-        <div id="modal-footer" class="modal-footer">
-          <a id="modal-link" href="#" class="btn-primary" target="_blank" data-i18n="modal-btn">Ver Portafolio ↗</a>
+        <div class="modal-right">
+          <div class="modal-header">
+            <h3 id="modal-name">Member Name</h3>
+            <span id="modal-role" class="modal-role">Role</span>
+          </div>
+          <p id="modal-desc" class="modal-desc">Description goes here.</p>
+          <div id="modal-footer" class="modal-footer">
+            <a id="modal-link" href="#" class="btn-primary" target="_blank" data-i18n="modal-btn">Ver Portafolio ↗</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
