@@ -41,6 +41,25 @@ export function initProjectModal() {
             visualContainer.innerHTML = '';
             visualContainer.appendChild(mediaClone);
             
+            // Refinement: Dynamic Blur Visibility
+            const detailsElement = modal.querySelector('.project-modal-details');
+            let idleTimeout;
+
+            const resetIdleTimer = () => {
+                detailsElement.classList.add('show-blur');
+                clearTimeout(idleTimeout);
+                idleTimeout = setTimeout(() => {
+                    detailsElement.classList.remove('show-blur');
+                }, 2000); // 2 seconds of idle to hide the blur
+            };
+
+            const container = modal.querySelector('.project-modal-container');
+            container.addEventListener('mousemove', resetIdleTimer);
+            container.addEventListener('mouseleave', () => {
+                clearTimeout(idleTimeout);
+                detailsElement.classList.remove('show-blur');
+            });
+
             if (mediaClone.tagName === 'VIDEO') {
                 mediaClone.play().catch(e => {
                     console.log("Auto-play blocked, enabling controls so user can start it", e);

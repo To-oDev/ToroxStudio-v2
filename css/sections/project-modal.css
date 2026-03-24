@@ -76,6 +76,12 @@
   border-radius: 12px;
   z-index: -1;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-modal-details.show-blur::before {
+  opacity: 1;
 }
 
 .project-modal-details > * {
@@ -92,6 +98,12 @@
   color: var(--purple);
   margin-bottom: 0.8rem;
   font-weight: 600;
+  opacity: 0.35;
+  transition: opacity 0.4s ease;
+}
+
+.project-modal-details.show-blur #project-modal-cat {
+  opacity: 1;
 }
 
 #project-modal-name {
@@ -102,6 +114,14 @@
   line-height: 0.9;
   margin-bottom: 1.5rem;
   text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+  opacity: 0.35;
+}
+
+.project-modal-details.show-blur #project-modal-name {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 0 10px rgba(180, 79, 255, 0.3));
+  opacity: 1;
 }
 
 @media (max-width: 767px) {
@@ -113,15 +133,24 @@
   max-width: 600px;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: rgba(255,255,255,0.85);
+  color: #fff;
   margin-bottom: 2rem;
   text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: opacity 0.4s ease;
+  opacity: 0.35;
 }
 
-/* Hover effect for controls logic handled in JS, 
-   but we can dim the overlay if needed when hovering controls section */
-.project-modal-container:hover .project-modal-details {
-  opacity: 0.6; /* Slight dim to focus on video controls */
+.project-modal-details.show-blur #project-modal-desc {
+  opacity: 1;
+}
+
+.project-modal-details .btn-primary {
+  opacity: 0.35;
+  transition: opacity 0.4s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.project-modal-details.show-blur .btn-primary {
+  opacity: 1;
 }
 
 /* Floating animation */
