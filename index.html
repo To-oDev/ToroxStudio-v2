@@ -34,10 +34,10 @@
       <li><a href="#process" data-i18n="nav-process">Proceso</a></li>
       <li><a href="#contact" class="nav-cta" data-i18n="nav-cta">Iniciar Proyecto</a></li>
     </ul>
-    <div class="lang-toggle">
+    <torox-lang-selector class="lang-toggle">
       <button class="lang-btn active" data-lang="es">ES</button>
       <button class="lang-btn" data-lang="en">EN</button>
-    </div>
+    </torox-lang-selector>
     <div id="burger-menu" class="burger-menu" 
          aria-label="Open navigation menu" 
          aria-expanded="false" 
@@ -576,52 +576,56 @@
   </footer>
 
   <!-- TEAM MODAL -->
-  <div id="team-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name">
-    <div class="modal-container">
-      <button class="modal-close" data-i18n="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-content">
-        <div class="modal-left">
-          <div class="modal-img-frame">
-            <img id="modal-img" src="" alt="Team Member">
+  <torox-team-modal id="team-modal">
+    <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <div class="modal-container">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-content">
+          <div class="modal-left">
+            <div class="modal-img-frame">
+              <img id="modal-img" src="" alt="Team Member">
+            </div>
           </div>
-        </div>
-        <div class="modal-right">
-          <div class="modal-header">
-            <h3 id="modal-name">Member Name</h3>
-            <span id="modal-role" class="modal-role">Role</span>
-          </div>
-          <p id="modal-desc" class="modal-desc">Description goes here.</p>
-          <div id="modal-footer" class="modal-footer">
-            <a id="modal-link" href="#" class="btn-primary" target="_blank" data-i18n="modal-btn">Ver Portafolio ↗</a>
+          <div class="modal-right">
+            <div class="modal-header">
+              <h3 id="modal-name">Member Name</h3>
+              <span id="modal-role" class="modal-role">Role</span>
+            </div>
+            <p id="modal-desc" class="modal-desc">Description goes here.</p>
+            <div id="modal-footer" class="modal-footer">
+              <a id="modal-link" href="#" class="btn-primary" target="_blank" data-i18n="modal-btn">Ver Portafolio ↗</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </torox-team-modal>
 
   <!-- PROJECT MODAL -->
-  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="project-modal-name">
-    <div class="modal-container project-modal-container">
-      <button class="modal-close" data-i18n="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-content horizontal">
-        <div class="modal-left project-modal-visual">
-          <div class="project-video-container">
-            <!-- Content will be injected here -->
+  <torox-project-modal id="project-modal">
+    <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="project-modal-name">
+      <div class="modal-container project-modal-container">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-content horizontal">
+          <div class="modal-left project-modal-visual">
+            <div class="project-video-container">
+              <!-- Content will be injected here -->
+            </div>
           </div>
-        </div>
-        <div class="modal-right project-modal-details">
-          <div class="modal-header">
-            <div id="project-modal-cat" class="project-cat">Category</div>
-            <h3 id="project-modal-name">Project Name</h3>
-          </div>
-          <p id="project-modal-desc" class="modal-desc">Description goes here.</p>
-          <div class="modal-footer">
-            <a href="#contact" class="btn-primary" data-i18n="modal-btn-contact">Iniciar Proyecto Similar</a>
+          <div class="modal-right project-modal-details">
+            <div class="modal-header">
+              <div id="project-modal-cat" class="project-cat">Category</div>
+              <h3 id="project-modal-name">Project Name</h3>
+            </div>
+            <p id="project-modal-desc" class="modal-desc">Description goes here.</p>
+            <div class="modal-footer">
+              <a href="#contact" class="btn-primary" data-i18n="modal-btn-contact">Iniciar Proyecto Similar</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </torox-project-modal>
 
   <script type="module" src="./js/main.js"></script>
 </body>
