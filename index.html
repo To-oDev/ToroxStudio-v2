@@ -9,6 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400&display=swap"
     rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="./media/favicon.svg">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -22,11 +23,11 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">
+    <a href="#" class="nav-logo" aria-label="Torox Studio Home">
       <img src="./media/torox-logo-no-tratado.png" alt="Torox Logo">
       TOROX<span>.</span>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#services" data-i18n="nav-services">Servicios</a></li>
       <li><a href="#work" data-i18n="nav-work">Portafolio</a></li>
       <li><a href="#about" data-i18n="nav-about">Nosotros</a></li>
@@ -37,7 +38,10 @@
       <button class="lang-btn active" data-lang="es">ES</button>
       <button class="lang-btn" data-lang="en">EN</button>
     </div>
-    <div id="burger-menu" class="burger-menu">
+    <div id="burger-menu" class="burger-menu" 
+         aria-label="Open navigation menu" 
+         aria-expanded="false" 
+         aria-controls="nav-links">
       <span></span>
       <span></span>
       <span></span>
@@ -572,9 +576,9 @@
   </footer>
 
   <!-- TEAM MODAL -->
-  <div id="team-modal" class="modal-overlay">
+  <div id="team-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name">
     <div class="modal-container">
-      <button class="modal-close" data-i18n="modal-close">&times;</button>
+      <button class="modal-close" data-i18n="modal-close" aria-label="Close modal">&times;</button>
       <div class="modal-content">
         <div class="modal-left">
           <div class="modal-img-frame">
@@ -596,9 +600,9 @@
   </div>
 
   <!-- PROJECT MODAL -->
-  <div id="project-modal" class="modal-overlay">
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="project-modal-name">
     <div class="modal-container project-modal-container">
-      <button class="modal-close" data-i18n="modal-close">&times;</button>
+      <button class="modal-close" data-i18n="modal-close" aria-label="Close modal">&times;</button>
       <div class="modal-content horizontal">
         <div class="modal-left project-modal-visual">
           <div class="project-video-container">

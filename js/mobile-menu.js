@@ -8,6 +8,10 @@ export function initMobileMenu() {
   if (!burger || !navLinks) return;
 
   burger.addEventListener('click', () => {
+    const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', !isExpanded);
+    navLinks.setAttribute('aria-hidden', isExpanded);
+    
     burger.classList.toggle('active');
     navLinks.classList.toggle('active');
     body.classList.toggle('menu-open');
@@ -20,6 +24,8 @@ export function initMobileMenu() {
       burger.classList.remove('active');
       navLinks.classList.remove('active');
       body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+      navLinks.setAttribute('aria-hidden', 'true');
     });
   });
 
@@ -29,6 +35,8 @@ export function initMobileMenu() {
       burger.classList.remove('active');
       navLinks.classList.remove('active');
       body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+      navLinks.setAttribute('aria-hidden', 'false'); // Visible on desktop
     }
   });
 }
